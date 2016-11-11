@@ -6,7 +6,7 @@
  * @description
  * # treeMap
  */
-angular.module('interfaceApp'), []).directive('treemap', function() {
+angular.module('interfaceApp').directive('treemap', function() {
   var elem;
   elem = angular.element('<div class="angular-treemap"/>');
   return {

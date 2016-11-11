@@ -10,7 +10,7 @@
 angular.module('interfaceApp')
   .factory('stats', function ($http) {
 
-    var dir = '/data/src.json';
+    var dir = 'src.json';
 
     // Public API here
     return {

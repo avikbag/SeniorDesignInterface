@@ -8,7 +8,7 @@
  * Controller of the interfaceApp
  */
 angular.module('interfaceApp')
-  .controller('MainCtrl', function ($scope, stats) {
+  .controller('MainCtrl', function ($scope, $http, stats) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -26,7 +26,23 @@ angular.module('interfaceApp')
       $scope.data = temp_vals;
 
     });
-    
+    $scope.formatName = (function(_this) {
+    return function(name) {
+      return name;
+    };
+  })(this);
+  $scope.onDetail = (function(_this) {
+    return function(node) {
+      return console.log(node);
+    };
+  })(this);
+  $http.get('/flare_with_color.json').success((function(_this) {
+    return function(data) {
+      console.log(data);
+      return $scope.tree = data;
+    };
+  })(this));
+  return $scope.tree = {};
 
     //$scope.labels = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
     //$scope.data = [300, 500, 100];
