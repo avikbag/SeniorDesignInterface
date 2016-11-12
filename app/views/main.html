@@ -1,11 +1,12 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <canvas id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels"></canvas>
-   <div treemap="tree"
-        name="formatName(name)"
-        detail="onDetail(node)"
-        colorLow="blue"
-        colorMid="white"
-        colorHigh="yellow"></div>
+<div class="container">
+  
+  <canvas id="bar" class="chart chart-bar" 
+    chart-data="values" 
+    chart-labels="job_labels" 
+    chart-series="class_type"
+    chart-options="options"
+    >
+  </canvas>
+  
 </div>
 

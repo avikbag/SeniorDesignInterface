@@ -10,11 +10,9 @@
 angular.module('interfaceApp')
   .factory('stats', function ($http) {
 
-    var dir = 'src.json';
-
     // Public API here
     return {
-      fetch: function () {
+      fetch: function (dir) {
         return $http.get(dir);
       }
     };
