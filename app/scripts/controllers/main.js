@@ -68,15 +68,16 @@ angular.module('interfaceApp')
         if ($scope.job_labelsRV.length == 0){
           // Initializing the series
           $scope.job_labelsRV.push.apply($scope.job_labelsRV, keys);
+          $scope.job_labelsRV.pop();
           for(var j = 0; j < 6; j++){
             // Push an empty array, meaning a row, each corresponsing 
             // to the series, in other words, the classes
             console.log("cjdsflka")
-            $scope.valuesRV.push(Array(7).fill(-1));
+            $scope.valuesRV.push(Array(6).fill(-1));
           }
         } // End of initialization
         
-        for(var j = 0; j < keys.length; j++){
+        for(var j = 0; j < keys.length - 1; j++){
           console.log(keys[j], data[keys[j]], j);
           console.log($scope.valuesRV)
           $scope.valuesRV[checkerRV][j] = data[keys[j]];
