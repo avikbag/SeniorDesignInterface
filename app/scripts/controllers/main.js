@@ -9,14 +9,6 @@
  */
 angular.module('interfaceApp')
   .controller('MainCtrl', function ($scope, $http, stats) {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-    $scope.job_labels = [];
-    $scope.class_type = [];
-    $scope.values = [];
     /*
     var dir = "/src.json"
     stats.fetch(dir).then(function(msg){
@@ -30,6 +22,10 @@ angular.module('interfaceApp')
 
     });
     */
+    // Bar graph view for op code 
+    $scope.job_labels = [];
+    $scope.class_type = [];
+    $scope.values = [];
     var checker = 0;
     var dir_template = "mockdata/job_output";
     for(var i = 0; i < 6 ; i++){
@@ -54,6 +50,40 @@ angular.module('interfaceApp')
       console.log($scope.values, $scope.class_type)
       console.log("Job"+checker+"done\n\n");
       checker += 1;
+      });
+    }
+    
+    // Radar view for op code 
+    $scope.job_labelsRV = [];
+    $scope.class_typeRV = [];
+    $scope.valuesRV = [];
+    var checkerRV = 0;
+    var dir_template = "mockdata/job_output";
+    for(var i = 0; i < 6 ; i++){
+      $scope.class_typeRV.push("job"+i);
+      stats.fetch(dir_template + i + ".json").then(function(msg){
+        var data = msg.data.job_details.simulation_results.gem5.op_class;
+        var keys = Object.keys(data);
+        console.log(keys)
+        if ($scope.job_labelsRV.length == 0){
+          // Initializing the series
+          $scope.job_labelsRV.push.apply($scope.job_labelsRV, keys);
+          for(var j = 0; j < 6; j++){
+            // Push an empty array, meaning a row, each corresponsing 
+            // to the series, in other words, the classes
+            console.log("cjdsflka")
+            $scope.valuesRV.push(Array(7).fill(-1));
+          }
+        } // End of initialization
+        
+        for(var j = 0; j < keys.length; j++){
+          console.log(keys[j], data[keys[j]], j);
+          console.log($scope.valuesRV)
+          $scope.valuesRV[checkerRV][j] = data[keys[j]];
+        }
+      console.log($scope.valuesRV, $scope.class_typeRV, $scope.job_labelsRV)
+      console.log("Job"+checkerRV+"done\n\n");
+      checkerRV += 1;
       });
     }
     $scope.options = {
