@@ -28,6 +28,8 @@ angular.module('interfaceApp')
     $scope.values = [];
     $scope.execTimes = [];
     $scope.area = [];
+    $scope.power = [[], []];
+    $scope.powerSeries = ["Dynamic read energy (nJ)", "Dynamic write energy (nJ)"]
     var checker = 0;
     var dir_template = "mockdata/job_output";
     for(var i = 0; i < 6 ; i++){
@@ -36,6 +38,8 @@ angular.module('interfaceApp')
         var data = msg.data.job_details.simulation_results.gem5.op_class;
         $scope.execTimes.push(msg.data.job_details.simulation_results.gem5["execution time (s)"]);
         $scope.area.push(msg.data.job_details.simulation_results.mcpat["Area (mm2)"]);
+        $scope.power[0].push(msg.data.job_details.simulation_results.mcpat["Dynamic read energy (nJ)"]);
+        $scope.power[1].push(msg.data.job_details.simulation_results.mcpat["Dynamic write energy (nJ)"]);
         var keys = Object.keys(data);
         if ($scope.class_type.length == 0){
           // Initializing the series
@@ -108,6 +112,27 @@ angular.module('interfaceApp')
                 scaleLabel: {
                   display: true,
                   labelString: 'Instruction count'
+                  }
+              }]
+            }
+    }
+    $scope.optionsPow = {
+            title: {
+              display: true,
+              text: 'McPat power analysis from job outputs'
+            },
+            legend: {
+              display: true,
+              position: "right",
+              labels: {
+                fontColor: 'rgb(0, 0, 0)'
+              }
+            }, 
+            scales: {
+              yAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Power output in nJ'
                   }
               }]
             }
