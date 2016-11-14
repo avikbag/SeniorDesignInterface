@@ -22,16 +22,20 @@ angular.module('interfaceApp')
 
     });
     */
-    // Bar graph view for op code 
+    // Bar graph view for op code/execution time.
     $scope.job_labels = [];
     $scope.class_type = [];
     $scope.values = [];
+    $scope.execTimes = [];
+    $scope.area = [];
     var checker = 0;
     var dir_template = "mockdata/job_output";
     for(var i = 0; i < 6 ; i++){
       $scope.job_labels.push("job"+i);
       stats.fetch(dir_template + i + ".json").then(function(msg){
         var data = msg.data.job_details.simulation_results.gem5.op_class;
+        $scope.execTimes.push(msg.data.job_details.simulation_results.gem5["execution time (s)"]);
+        $scope.area.push(msg.data.job_details.simulation_results.mcpat["Area (mm2)"]);
         var keys = Object.keys(data);
         if ($scope.class_type.length == 0){
           // Initializing the series
@@ -44,11 +48,11 @@ angular.module('interfaceApp')
         } // End of initialization
         
         for(var j = 0; j < keys.length; j++){
-          console.log(keys[j], data[keys[j]], j);
+          //console.log(keys[j], data[keys[j]], j);
           $scope.values[j][checker] = data[keys[j]];
         }
-      console.log($scope.values, $scope.class_type)
-      console.log("Job"+checker+"done\n\n");
+      //console.log($scope.values, $scope.class_type, $scope.execTimes);
+      //console.log("Job"+checker+"done\n\n");
       checker += 1;
       });
     }
@@ -64,7 +68,7 @@ angular.module('interfaceApp')
       stats.fetch(dir_template + i + ".json").then(function(msg){
         var data = msg.data.job_details.simulation_results.gem5.op_class;
         var keys = Object.keys(data);
-        console.log(keys)
+        //console.log(keys)
         if ($scope.job_labelsRV.length == 0){
           // Initializing the series
           $scope.job_labelsRV.push.apply($scope.job_labelsRV, keys);
@@ -72,18 +76,18 @@ angular.module('interfaceApp')
           for(var j = 0; j < 6; j++){
             // Push an empty array, meaning a row, each corresponsing 
             // to the series, in other words, the classes
-            console.log("cjdsflka")
+            //console.log("cjdsflka")
             $scope.valuesRV.push(Array(6).fill(-1));
           }
         } // End of initialization
         
         for(var j = 0; j < keys.length - 1; j++){
-          console.log(keys[j], data[keys[j]], j);
-          console.log($scope.valuesRV)
+          //console.log(keys[j], data[keys[j]], j);
+          //console.log($scope.valuesRV)
           $scope.valuesRV[checkerRV][j] = data[keys[j]];
         }
-      console.log($scope.valuesRV, $scope.class_typeRV, $scope.job_labelsRV)
-      console.log("Job"+checkerRV+"done\n\n");
+      //console.log($scope.valuesRV, $scope.class_typeRV, $scope.job_labelsRV)
+      //console.log("Job"+checkerRV+"done\n\n");
       checkerRV += 1;
       });
     }
@@ -98,7 +102,94 @@ angular.module('interfaceApp')
               labels: {
                 fontColor: 'rgb(0, 0, 0)'
               }
+            }, 
+            scales: {
+              yAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Instruction count'
+                  }
+              }]
+            }
+    }
+    $scope.optionsrv = {
+            title: {
+              display: true,
+              text: 'Op Code Distribution for each job output'
+            },
+            legend: {
+              display: true,
+              position: "right",
+              labels: {
+                fontColor: 'rgb(0, 0, 0)'
+              }
+            }
+    }
+    $scope.options1 = {
+            title: {
+              display: true,
+              text: 'Op Code Distribution for each job output {0}'
+            },
+            legend: {
+              display: true,
+              position: "right",
+              labels: {
+                fontColor: 'rgb(0, 0, 0)'
+              }
           }
+    }
+    $scope.options2 = {
+            title: {
+              display: true,
+              text: 'Op Code Distribution for each job output {1}'
+            },
+            legend: {
+              display: true,
+              position: "right",
+              labels: {
+                fontColor: 'rgb(0, 0, 0)'
+              }
+          }
+    }
+    $scope.options3 = {
+            title: {
+              display: true,
+              text: 'Execution Time for each job output'
+            },
+            legend: {
+              display: false,
+              position: "right",
+              labels: {
+                fontColor: 'rgb(0, 0, 0)'
+              }
+            },
+            scales: {
+              yAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Execution time in seconds'
+                  }
+              }],
+              xAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Job execution iteration'
+                  }
+              }]
+            }
+    }
+    $scope.optionsrv = {
+            title: {
+              display: true,
+              text: 'Area mm2'
+            },
+            legend: {
+              display: true,
+              position: "right",
+              labels: {
+                fontColor: 'rgb(0, 0, 0)'
+              }
+            }
     }
       
     

@@ -6,13 +6,44 @@
     chart-series="class_type"
     chart-options="options"
     >
-  </canvas>
+    </canvas>
+</div>
+
+<div class="container">
   <canvas id="radar" class="chart chart-radar"
     chart-data="valuesRV" 
     chart-labels="job_labelsRV" 
     chart-series="class_typeRV"
-    chart-options="options"
+    chart-options="optionsrv"
     >
   </canvas>
-</div>
+  <canvas id="pie" class="chart chart-pie"
+    chart-data="valuesRV[0]" 
+    chart-labels="job_labelsRV"
+    chart-series="class_type"
+    chart-options="optionsrv"
+    >
+  </canvas>
+  <canvas id="pie" class="chart chart-pie"
+    chart-data="valuesRV[1]" 
+    chart-labels="job_labelsRV"
+    chart-series="class_type"
+    chart-options="options2"
+    >
+  </canvas>
 
+  <canvas id="bar" class="chart chart-bar" 
+    chart-data="execTimes" 
+    chart-labels="job_labels" 
+    chart-options="options3"
+    >
+  </canvas>
+  
+  <canvas id="polar-area" class="chart chart-polar-area" 
+    chart-data="area" 
+    chart-labels="job_labels" 
+    chart-options="optionsrv"
+    >
+  </canvas>
+
+</div>
