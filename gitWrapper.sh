@@ -7,3 +7,4 @@ echo "Git add all complete"
 
 git commit -m "$MESSAGE"
 
+git push origin master
