@@ -17,7 +17,8 @@
       </md-toolbar>
       <md-content>
         <md-content layout-margin ng-repeat="detail in info">
-          {{detail.data.job_details}}
+        <h4>{{detail.data.job_details.job_name}} </h4>
+          {{detail.data.job_details.job_timestamp}}
         </md-content>
       </md-content>
 
@@ -28,7 +29,12 @@
       <md-tab id="tab1">
         <md-tab-label>Op Code Distribution</md-tab-label>
         <md-tab-body>
-        <div flex layout="row">
+        <div flex layout="row" layout-align="end center">
+           <md-radio-group flex ng-model="graphic" layout="row" style="margin:20px">
+            <md-radio-button ng-model="graphic" value=0 class="md-primary">Top level overview</md-radio-button>
+            <md-radio-button ng-model="graphic" value=1> Radar View </md-radio-button>
+            <md-radio-button ng-model="graphic" value=2> Op Code Comparison </md-radio-button>
+           </md-radio-group>
           <md-button class="md-raised md-accent" ng-click="toggleRight()">
             <md-tooltip md-direction="top">
               Job Details
@@ -36,11 +42,6 @@
             <md-icon md-font-library="material-icons">
               menu
             </md-icon></md-button>
-           <md-radio-group flex ng-model="graphic" layout="row" style="margin:20px">
-            <md-radio-button ng-model="graphic" value=0 class="md-primary">Top level overview</md-radio-button>
-            <md-radio-button ng-model="graphic" value=1> Radar View </md-radio-button>
-            <md-radio-button ng-model="graphic" value=2> Op Code Comparison </md-radio-button>
-           </md-radio-group>
         </div>
           <div ng-show="graphic == 0">
           <canvas id="bar" class="chart chart-bar" 
