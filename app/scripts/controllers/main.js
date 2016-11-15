@@ -166,7 +166,7 @@ angular.module('interfaceApp')
     $scope.options2 = {
             title: {
               display: true,
-              text: 'Op Code Distribution for each job output {1}'
+              text: 'Op Code Distribution for each job output'
             },
             legend: {
               display: true,
@@ -218,7 +218,10 @@ angular.module('interfaceApp')
     }
       
     
-      
+    
+    $scope.graphic = 0;
+    $scope.job0 = 0;
+    $scope.job1 = 1;
       
     // The tree map stuff.   
     $scope.formatName = (function() {

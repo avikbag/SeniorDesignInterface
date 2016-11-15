@@ -1,49 +1,80 @@
 <div class="container">
-  
-  <canvas id="bar" class="chart chart-bar" 
-    chart-data="values" 
-    chart-labels="job_labels" 
-    chart-series="class_type"
-    chart-options="options"
-    >
-    </canvas>
-    
-  <canvas id="radar" class="chart chart-radar"
-    chart-data="valuesRV" 
-    chart-labels="job_labelsRV" 
-    chart-series="class_typeRV"
-    chart-options="optionsrv"
-    >
-  </canvas>
-  <canvas id="pie" class="chart chart-pie"
-    chart-data="valuesRV[0]" 
-    chart-labels="job_labelsRV"
-    chart-series="class_type"
-    chart-options="optionsrv"
-    >
-  </canvas>
-  <canvas id="pie" class="chart chart-pie"
-    chart-data="valuesRV[1]" 
-    chart-labels="job_labelsRV"
-    chart-series="class_type"
-    chart-options="options2"
-    >
-  </canvas>
+  <md-content class="md-padding">
+    <md-tabs class="md-primary" md-dynamic-height md-border-bottom>
+      <md-tab id="tab1">
+        <md-tab-label>Op Code Distribution</md-tab-label>
+        <md-tab-body>
+<md-radio-group ng-model="graphic" layout="row" style="margin:20px">
+  <md-radio-button ng-model="graphic" value=0 class="md-primary">Top level overview</md-radio-button>
+  <md-radio-button ng-model="graphic" value=1> Radar View </md-radio-button>
+  <md-radio-button ng-model="graphic" value=2> Op Code Comparison </md-radio-button>
+</md-radio-group>
+          <div ng-show="graphic == 0">
+          <canvas id="bar" class="chart chart-bar" 
+            chart-data="values" 
+            chart-labels="job_labels" 
+            chart-series="class_type"
+            chart-options="options"></canvas></div>
+          
+          <div ng-show="graphic == 1">
+          <canvas id="radar" class="chart chart-radar"
+            chart-data="valuesRV" 
+            chart-labels="job_labelsRV" 
+            chart-series="class_typeRV"
+            chart-options="optionsrv"></canvas></div>
+          
+          <div ng-show="graphic == 2">
+            <div layout="row">
+              <div flex style="margin-left: 10px; margin-right: 10px">
+                <md-select placeholder="Choose Job for comparison" ng-model="job0">
+                  <md-option ng-value="$index" ng-repeat="job0 in job_labels">{{job0}}</md-option>
+                </md-select>
+              <canvas id="pie" class="chart chart-pie"
+                chart-data=valuesRV[job0] 
+                chart-labels="job_labelsRV"
+                chart-series="class_type"
+                chart-options="options2"></canvas>
+              </div>
 
-  <canvas id="bar" class="chart chart-bar" 
-    chart-data="execTimes" 
-    chart-labels="job_labels" 
-    chart-options="options3"
-    >
-  </canvas>
-  
+              <div flex style="margin-left: 10px; margin-right: 10px">
+                <md-select placeholder="Choose Job for comparison" ng-model="job1">
+                  <md-option ng-value="$index" ng-repeat="job1 in job_labels">{{job1}}</md-option>
+                </md-select>
+                <canvas id="pie" class="chart chart-pie"
+                  chart-data=valuesRV[job1] 
+                  chart-labels="job_labelsRV"
+                  chart-series="class_type"
+                  chart-options="options2">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="tab2">
+        <md-tab-label>Execution Times</md-tab-label>
+        <md-tab-body>
+      <canvas id="bar" class="chart chart-bar" 
+        chart-data="execTimes" 
+        chart-labels="job_labels" 
+        chart-options="options3">
+      </canvas>
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="tab3">
+        <md-tab-label>Area</md-tab-label>
+        <md-tab-body>
   <canvas id="polar-area" class="chart chart-polar-area" 
     chart-data="area" 
     chart-labels="job_labels" 
     chart-options="optionsrv"
     >
   </canvas>
-
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="tab4">
+        <md-tab-label>Power</md-tab-label>
+        <md-tab-body>
   <canvas id="bar" class="chart chart-bar" 
     chart-data="power" 
     chart-labels="job_labels" 
@@ -51,4 +82,9 @@
     chart-options="optionsPow"
     >
     </canvas>
+        </md-tab-body>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+
 </div>
