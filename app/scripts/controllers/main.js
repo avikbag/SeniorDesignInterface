@@ -8,7 +8,7 @@
  * Controller of the interfaceApp
  */
 angular.module('interfaceApp')
-  .controller('MainCtrl', function ($scope, $http, stats) {
+  .controller('MainCtrl', function ($scope, $http, $mdSidenav, stats) {
     /*
     var dir = "/src.json"
     stats.fetch(dir).then(function(msg){
@@ -32,6 +32,8 @@ angular.module('interfaceApp')
     $scope.powerSeries = ["Dynamic read energy (nJ)", "Dynamic write energy (nJ)"]
     var checker = 0;
     var dir_template = "mockdata/job_output";
+    
+    $scope.info = [];
     for(var i = 0; i < 6 ; i++){
       $scope.job_labels.push("job"+i);
       stats.fetch(dir_template + i + ".json").then(function(msg){
@@ -41,6 +43,9 @@ angular.module('interfaceApp')
         $scope.power[0].push(msg.data.job_details.simulation_results.mcpat["Dynamic read energy (nJ)"]);
         $scope.power[1].push(msg.data.job_details.simulation_results.mcpat["Dynamic write energy (nJ)"]);
         var keys = Object.keys(data);
+        // Adding job info to list
+        delete msg.data.job_details["simulation_results"];
+        $scope.info.push(msg);
         if ($scope.class_type.length == 0){
           // Initializing the series
           $scope.class_type.push.apply($scope.class_type, keys);
@@ -222,6 +227,15 @@ angular.module('interfaceApp')
     $scope.graphic = 0;
     $scope.job0 = 0;
     $scope.job1 = 1;
+    
+    $scope.toggleLeft = buildToggler('left');
+    $scope.toggleRight = buildToggler('right');
+
+    function buildToggler(componentId) {
+      return function() {
+        $mdSidenav(componentId).toggle();
+      }
+    }
       
     // The tree map stuff.   
     $scope.formatName = (function() {
