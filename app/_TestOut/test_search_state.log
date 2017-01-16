@@ -1,0 +1,240 @@
+INFO:root:START test_search_state TESTS: 2017-01-16 16:57:50
+INFO:root:START test_defaults: 2017-01-16 16:57:50
+INFO:root:START test_generate_job_output: 2017-01-16 16:57:50
+INFO:root:{
+    "constraints": {},
+    "job_name": "Mock Test",
+    "job_timestamp": "2017-01-16 16:57:50",
+    "simulation_results": {
+        "MockSim": {
+            "Area (mm2)": 4294967296,
+            "Dynamic read energy (nJ)": 65536,
+            "Dynamic write energy (nJ)": 65536,
+            "execution time (s)": 2.724783761160714e-13
+        }
+    },
+    "system_configuration": {
+        "cache_size": 65536,
+        "cpu_count": 8,
+        "cpu_frequency": 7000000000.0
+    }
+}
+INFO:root:START test_stats_to_json: 2017-01-16 16:57:50
+INFO:root:{
+    "MockSim": {
+        "Area (mm2)": 4294967296,
+        "Dynamic read energy (nJ)": 65536,
+        "Dynamic write energy (nJ)": 65536,
+        "execution time (s)": 2.724783761160714e-13
+    }
+}
+INFO:root:START test_search_state TESTS: 2017-01-16 16:59:44
+INFO:root:START test_defaults: 2017-01-16 16:59:44
+INFO:root:START test_generate_job_output: 2017-01-16 16:59:44
+INFO:root:{
+    "constraints": {},
+    "job_name": "Mock Test",
+    "job_timestamp": "2017-01-16 16:59:44",
+    "simulation_results": {
+        "MockSim": {
+            "Area (mm2)": 4294967296,
+            "Dynamic read energy (nJ)": 65536,
+            "Dynamic write energy (nJ)": 65536,
+            "execution time (s)": 2.724783761160714e-13
+        }
+    },
+    "system_configuration": {
+        "cache_size": 65536,
+        "cpu_count": 8,
+        "cpu_frequency": 7000000000.0
+    }
+}
+INFO:root:START test_stats_to_json: 2017-01-16 16:59:44
+INFO:root:{
+    "MockSim": {
+        "Area (mm2)": 4294967296,
+        "Dynamic read energy (nJ)": 65536,
+        "Dynamic write energy (nJ)": 65536,
+        "execution time (s)": 2.724783761160714e-13
+    }
+}
+INFO:root:START test_search_state TESTS: 2017-01-16 17:00:30
+INFO:root:START test_defaults: 2017-01-16 17:00:30
+INFO:root:START test_generate_job_output: 2017-01-16 17:00:30
+INFO:root:{
+    "constraints": {},
+    "job_name": "Mock Test",
+    "job_timestamp": "2017-01-16 17:00:30",
+    "simulation_results": {
+        "MockSim": {
+            "Area (mm2)": 4294967296,
+            "Dynamic read energy (nJ)": 65536,
+            "Dynamic write energy (nJ)": 65536,
+            "execution time (s)": 2.724783761160714e-13
+        }
+    },
+    "system_configuration": {
+        "cache_size": 65536,
+        "cpu_count": 8,
+        "cpu_frequency": 7000000000.0
+    }
+}
+INFO:root:START test_stats_to_json: 2017-01-16 17:00:30
+INFO:root:{
+    "MockSim": {
+        "Area (mm2)": 4294967296,
+        "Dynamic read energy (nJ)": 65536,
+        "Dynamic write energy (nJ)": 65536,
+        "execution time (s)": 2.724783761160714e-13
+    }
+}
+INFO:root:START test_search_state TESTS: 2017-01-16 17:01:55
+INFO:root:START test_defaults: 2017-01-16 17:01:55
+INFO:root:START test_generate_job_output: 2017-01-16 17:01:55
+INFO:root:{
+    "constraints": {},
+    "job_name": "Mock Test",
+    "job_timestamp": "2017-01-16 17:01:55",
+    "simulation_results": {
+        "MockSim": {
+            "Area (mm2)": 4294967296,
+            "Dynamic read energy (nJ)": 65536,
+            "Dynamic write energy (nJ)": 65536,
+            "execution time (s)": 2.724783761160714e-13
+        }
+    },
+    "system_configuration": {
+        "cache_size": 65536,
+        "cpu_count": 8,
+        "cpu_frequency": 7000000000.0
+    }
+}
+INFO:root:START test_stats_to_json: 2017-01-16 17:01:55
+INFO:root:{
+    "MockSim": {
+        "Area (mm2)": 4294967296,
+        "Dynamic read energy (nJ)": 65536,
+        "Dynamic write energy (nJ)": 65536,
+        "execution time (s)": 2.724783761160714e-13
+    }
+}
+INFO:root:START test_search_state TESTS: 2017-01-16 17:02:50
+INFO:root:START test_defaults: 2017-01-16 17:02:50
+INFO:root:START test_generate_job_output: 2017-01-16 17:02:50
+INFO:root:{
+    "constraints": {},
+    "job_name": "Mock Test",
+    "job_timestamp": "2017-01-16 17:02:50",
+    "simulation_results": {
+        "MockSim": {
+            "Area (mm2)": 4294967296,
+            "Dynamic read energy (nJ)": 65536,
+            "Dynamic write energy (nJ)": 65536,
+            "execution time (s)": 2.724783761160714e-13
+        }
+    },
+    "system_configuration": {
+        "cache_size": 65536,
+        "cpu_count": 8,
+        "cpu_frequency": 7000000000.0
+    }
+}
+INFO:root:START test_stats_to_json: 2017-01-16 17:02:50
+INFO:root:{
+    "MockSim": {
+        "Area (mm2)": 4294967296,
+        "Dynamic read energy (nJ)": 65536,
+        "Dynamic write energy (nJ)": 65536,
+        "execution time (s)": 2.724783761160714e-13
+    }
+}
+INFO:root:START test_search_state TESTS: 2017-01-16 17:04:30
+INFO:root:START test_defaults: 2017-01-16 17:04:30
+INFO:root:START test_generate_job_output: 2017-01-16 17:04:30
+INFO:root:{
+    "constraints": {},
+    "job_name": "Mock Test",
+    "job_timestamp": "2017-01-16 17:04:30",
+    "simulation_results": {
+        "MockSim": {
+            "Area (mm2)": 4294967296,
+            "Dynamic read energy (nJ)": 65536,
+            "Dynamic write energy (nJ)": 65536,
+            "execution time (s)": 2.724783761160714e-13
+        }
+    },
+    "system_configuration": {
+        "cache_size": 65536,
+        "cpu_count": 8,
+        "cpu_frequency": 7000000000.0
+    }
+}
+INFO:root:START test_stats_to_json: 2017-01-16 17:04:30
+INFO:root:{
+    "MockSim": {
+        "Area (mm2)": 4294967296,
+        "Dynamic read energy (nJ)": 65536,
+        "Dynamic write energy (nJ)": 65536,
+        "execution time (s)": 2.724783761160714e-13
+    }
+}
+INFO:root:START test_search_state TESTS: 2017-01-16 17:06:16
+INFO:root:START test_defaults: 2017-01-16 17:06:16
+INFO:root:START test_generate_job_output: 2017-01-16 17:06:16
+INFO:root:{
+    "constraints": {},
+    "job_name": "Mock Test",
+    "job_timestamp": "2017-01-16 17:06:16",
+    "simulation_results": {
+        "MockSim": {
+            "Area (mm2)": 4294967296,
+            "Dynamic read energy (nJ)": 65536,
+            "Dynamic write energy (nJ)": 65536,
+            "execution time (s)": 2.724783761160714e-13
+        }
+    },
+    "system_configuration": {
+        "cache_size": 65536,
+        "cpu_count": 8,
+        "cpu_frequency": 7000000000.0
+    }
+}
+INFO:root:START test_stats_to_json: 2017-01-16 17:06:16
+INFO:root:{
+    "MockSim": {
+        "Area (mm2)": 4294967296,
+        "Dynamic read energy (nJ)": 65536,
+        "Dynamic write energy (nJ)": 65536,
+        "execution time (s)": 2.724783761160714e-13
+    }
+}
+INFO:root:START test_search_state TESTS: 2017-01-16 17:06:31
+INFO:root:START test_defaults: 2017-01-16 17:06:31
+INFO:root:START test_generate_job_output: 2017-01-16 17:06:31
+INFO:root:{
+    "constraints": {},
+    "job_name": "Mock Test",
+    "job_timestamp": "2017-01-16 17:06:31",
+    "simulation_results": {
+        "MockSim": {
+            "Area (mm2)": 4294967296,
+            "Dynamic read energy (nJ)": 65536,
+            "Dynamic write energy (nJ)": 65536,
+            "execution time (s)": 2.724783761160714e-13
+        }
+    },
+    "system_configuration": {
+        "cache_size": 65536,
+        "cpu_count": 8,
+        "cpu_frequency": 7000000000.0
+    }
+}
+INFO:root:START test_stats_to_json: 2017-01-16 17:06:31
+INFO:root:{
+    "MockSim": {
+        "Area (mm2)": 4294967296,
+        "Dynamic read energy (nJ)": 65536,
+        "Dynamic write energy (nJ)": 65536,
+        "execution time (s)": 2.724783761160714e-13
+    }
+}

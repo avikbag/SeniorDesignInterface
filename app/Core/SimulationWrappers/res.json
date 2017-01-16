@@ -1,0 +1,2297 @@
+[
+    {
+        "stat": "sim_seconds", 
+        "value": "0.000003"
+    }, 
+    {
+        "stat": "sim_ticks", 
+        "value": "2915000"
+    }, 
+    {
+        "stat": "final_tick", 
+        "value": "2915000"
+    }, 
+    {
+        "stat": "sim_freq", 
+        "value": "1000000000000"
+    }, 
+    {
+        "stat": "host_inst_rate", 
+        "value": "248144"
+    }, 
+    {
+        "stat": "host_op_rate", 
+        "value": "287835"
+    }, 
+    {
+        "stat": "host_tick_rate", 
+        "value": "144171324"
+    }, 
+    {
+        "stat": "host_mem_usage", 
+        "value": "690444"
+    }, 
+    {
+        "stat": "host_seconds", 
+        "value": "0.02"
+    }, 
+    {
+        "stat": "sim_insts", 
+        "value": "5014"
+    }, 
+    {
+        "stat": "sim_ops", 
+        "value": "5818"
+    }, 
+    {
+        "stat": "system", 
+        "substat": [
+            {
+                "stat": "voltage_domain", 
+                "substat": [
+                    {
+                        "stat": "voltage", 
+                        "value": "1"
+                    }
+                ]
+            }, 
+            {
+                "stat": "clk_domain", 
+                "substat": [
+                    {
+                        "stat": "clock", 
+                        "value": "1000"
+                    }
+                ]
+            }, 
+            {
+                "stat": "mem_ctrls", 
+                "substat": [
+                    {
+                        "stat": "pwrStateResidencyTicks", 
+                        "substat": [
+                            {
+                                "stat": "UNDEFINED", 
+                                "value": "2915000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "bytes_read", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "inst", 
+                                        "value": "20108"
+                                    }, 
+                                    {
+                                        "stat": "data", 
+                                        "value": "4672"
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "24780"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "bytes_inst_read", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "inst", 
+                                        "value": "20108"
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "20108"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "bytes_written", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "data", 
+                                        "value": "3696"
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "3696"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "num_reads", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "inst", 
+                                        "value": "5027"
+                                    }, 
+                                    {
+                                        "stat": "data", 
+                                        "value": "1061"
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "6088"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "num_writes", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "data", 
+                                        "value": "936"
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "936"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "bw_read", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "inst", 
+                                        "value": "6898113208"
+                                    }, 
+                                    {
+                                        "stat": "data", 
+                                        "value": "1602744425"
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "8500857633"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "bw_inst_read", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "inst", 
+                                        "value": "6898113208"
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "6898113208"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "bw_write", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "data", 
+                                        "value": "1267924528"
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "1267924528"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "bw_total", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "inst", 
+                                        "value": "6898113208"
+                                    }, 
+                                    {
+                                        "stat": "data", 
+                                        "value": "2870668954"
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "9768782161"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "readReqs", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "writeReqs", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "readBursts", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "writeBursts", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "bytesReadDRAM", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "bytesReadWrQ", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "bytesWritten", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "bytesReadSys", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "bytesWrittenSys", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "servicedByWrQ", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "mergedWrBursts", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "neitherReadNorWriteReqs", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "1"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "2"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "3"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "4"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "5"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "6"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "7"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "8"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "9"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "10"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "11"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "12"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "13"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "14"
+                    }, 
+                    {
+                        "stat": "perBankRdBursts", 
+                        "value": "15"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "1"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "2"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "3"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "4"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "5"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "6"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "7"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "8"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "9"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "10"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "11"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "12"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "13"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "14"
+                    }, 
+                    {
+                        "stat": "perBankWrBursts", 
+                        "value": "15"
+                    }, 
+                    {
+                        "stat": "numRdRetry", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "numWrRetry", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "totGap", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "readPktSize", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "readPktSize", 
+                        "value": "1"
+                    }, 
+                    {
+                        "stat": "readPktSize", 
+                        "value": "2"
+                    }, 
+                    {
+                        "stat": "readPktSize", 
+                        "value": "3"
+                    }, 
+                    {
+                        "stat": "readPktSize", 
+                        "value": "4"
+                    }, 
+                    {
+                        "stat": "readPktSize", 
+                        "value": "5"
+                    }, 
+                    {
+                        "stat": "readPktSize", 
+                        "value": "6"
+                    }, 
+                    {
+                        "stat": "writePktSize", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "writePktSize", 
+                        "value": "1"
+                    }, 
+                    {
+                        "stat": "writePktSize", 
+                        "value": "2"
+                    }, 
+                    {
+                        "stat": "writePktSize", 
+                        "value": "3"
+                    }, 
+                    {
+                        "stat": "writePktSize", 
+                        "value": "4"
+                    }, 
+                    {
+                        "stat": "writePktSize", 
+                        "value": "5"
+                    }, 
+                    {
+                        "stat": "writePktSize", 
+                        "value": "6"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "1"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "2"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "3"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "4"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "5"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "6"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "7"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "8"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "9"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "10"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "11"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "12"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "13"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "14"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "15"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "16"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "17"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "18"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "19"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "20"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "21"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "22"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "23"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "24"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "25"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "26"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "27"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "28"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "29"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "30"
+                    }, 
+                    {
+                        "stat": "rdQLenPdf", 
+                        "value": "31"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "1"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "2"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "3"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "4"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "5"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "6"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "7"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "8"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "9"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "10"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "11"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "12"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "13"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "14"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "15"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "16"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "17"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "18"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "19"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "20"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "21"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "22"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "23"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "24"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "25"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "26"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "27"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "28"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "29"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "30"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "31"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "32"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "33"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "34"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "35"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "36"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "37"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "38"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "39"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "40"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "41"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "42"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "43"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "44"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "45"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "46"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "47"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "48"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "49"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "50"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "51"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "52"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "53"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "54"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "55"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "56"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "57"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "58"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "59"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "60"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "61"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "62"
+                    }, 
+                    {
+                        "stat": "wrQLenPdf", 
+                        "value": "63"
+                    }, 
+                    {
+                        "stat": "totQLat", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "totMemAccLat", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "totBusLat", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "avgQLat", 
+                        "value": "nan"
+                    }, 
+                    {
+                        "stat": "avgBusLat", 
+                        "value": "nan"
+                    }, 
+                    {
+                        "stat": "avgMemAccLat", 
+                        "value": "nan"
+                    }, 
+                    {
+                        "stat": "avgRdBW", 
+                        "value": "0.00"
+                    }, 
+                    {
+                        "stat": "avgWrBW", 
+                        "value": "0.00"
+                    }, 
+                    {
+                        "stat": "avgRdBWSys", 
+                        "value": "0.00"
+                    }, 
+                    {
+                        "stat": "avgWrBWSys", 
+                        "value": "0.00"
+                    }, 
+                    {
+                        "stat": "peakBW", 
+                        "value": "12800.00"
+                    }, 
+                    {
+                        "stat": "busUtil", 
+                        "value": "0.00"
+                    }, 
+                    {
+                        "stat": "busUtilRead", 
+                        "value": "0.00"
+                    }, 
+                    {
+                        "stat": "busUtilWrite", 
+                        "value": "0.00"
+                    }, 
+                    {
+                        "stat": "avgRdQLen", 
+                        "value": "0.00"
+                    }, 
+                    {
+                        "stat": "avgWrQLen", 
+                        "value": "0.00"
+                    }, 
+                    {
+                        "stat": "readRowHits", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "writeRowHits", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "readRowHitRate", 
+                        "value": "nan"
+                    }, 
+                    {
+                        "stat": "writeRowHitRate", 
+                        "value": "nan"
+                    }, 
+                    {
+                        "stat": "avgGap", 
+                        "value": "nan"
+                    }, 
+                    {
+                        "stat": "pageHitRate", 
+                        "value": "nan"
+                    }
+                ]
+            }, 
+            {
+                "stat": "mem_ctrls_0", 
+                "substat": [
+                    {
+                        "stat": "actEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "preEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "readEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "writeEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "refreshEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "actBackEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "preBackEnergy", 
+                        "value": "1119360"
+                    }, 
+                    {
+                        "stat": "actPowerDownEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "prePowerDownEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "selfRefreshEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "totalEnergy", 
+                        "value": "1119360"
+                    }, 
+                    {
+                        "stat": "averagePower", 
+                        "value": "384"
+                    }, 
+                    {
+                        "stat": "totalIdleTime", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "memoryStateTime", 
+                        "substat": [
+                            {
+                                "stat": "IDLE", 
+                                "value": "2915000"
+                            }, 
+                            {
+                                "stat": "REF", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SREF", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "PRE_PDN", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "ACT", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "ACT_PDN", 
+                                "value": "0"
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                "stat": "mem_ctrls_1", 
+                "substat": [
+                    {
+                        "stat": "actEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "preEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "readEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "writeEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "refreshEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "actBackEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "preBackEnergy", 
+                        "value": "1119360"
+                    }, 
+                    {
+                        "stat": "actPowerDownEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "prePowerDownEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "selfRefreshEnergy", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "totalEnergy", 
+                        "value": "1119360"
+                    }, 
+                    {
+                        "stat": "averagePower", 
+                        "value": "384"
+                    }, 
+                    {
+                        "stat": "totalIdleTime", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "memoryStateTime", 
+                        "substat": [
+                            {
+                                "stat": "IDLE", 
+                                "value": "2915000"
+                            }, 
+                            {
+                                "stat": "REF", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SREF", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "PRE_PDN", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "ACT", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "ACT_PDN", 
+                                "value": "0"
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                "stat": "pwrStateResidencyTicks", 
+                "substat": [
+                    {
+                        "stat": "UNDEFINED", 
+                        "value": "2915000"
+                    }
+                ]
+            }, 
+            {
+                "stat": "cpu_voltage_domain", 
+                "substat": [
+                    {
+                        "stat": "voltage", 
+                        "value": "1"
+                    }
+                ]
+            }, 
+            {
+                "stat": "cpu_clk_domain", 
+                "substat": [
+                    {
+                        "stat": "clock", 
+                        "value": "500"
+                    }
+                ]
+            }, 
+            {
+                "stat": "cpu", 
+                "substat": [
+                    {
+                        "stat": "dstage2_mmu", 
+                        "substat": [
+                            {
+                                "stat": "stage2_tlb", 
+                                "substat": [
+                                    {
+                                        "stat": "walker", 
+                                        "substat": [
+                                            {
+                                                "stat": "pwrStateResidencyTicks", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "UNDEFINED", 
+                                                        "value": "2915000"
+                                                    }
+                                                ]
+                                            }, 
+                                            {
+                                                "stat": "walks", 
+                                                "value": "0"
+                                            }, 
+                                            {
+                                                "stat": "walkRequestOrigin_Requested", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "Data", 
+                                                        "value": "0"
+                                                    }, 
+                                                    {
+                                                        "stat": "Inst", 
+                                                        "value": "0"
+                                                    }, 
+                                                    {
+                                                        "stat": "total", 
+                                                        "value": "0"
+                                                    }
+                                                ]
+                                            }, 
+                                            {
+                                                "stat": "walkRequestOrigin_Completed", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "Data", 
+                                                        "value": "0"
+                                                    }, 
+                                                    {
+                                                        "stat": "Inst", 
+                                                        "value": "0"
+                                                    }, 
+                                                    {
+                                                        "stat": "total", 
+                                                        "value": "0"
+                                                    }
+                                                ]
+                                            }, 
+                                            {
+                                                "stat": "walkRequestOrigin", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "total", 
+                                                        "value": "0"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }, 
+                                    {
+                                        "stat": "inst_hits", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "inst_misses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "read_hits", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "read_misses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "write_hits", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "write_misses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "flush_tlb", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "flush_tlb_mva", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "flush_tlb_mva_asid", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "flush_tlb_asid", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "flush_entries", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "align_faults", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "prefetch_faults", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "domain_faults", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "perms_faults", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "read_accesses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "write_accesses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "inst_accesses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "hits", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "misses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "accesses", 
+                                        "value": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "dtb", 
+                        "substat": [
+                            {
+                                "stat": "walker", 
+                                "substat": [
+                                    {
+                                        "stat": "pwrStateResidencyTicks", 
+                                        "substat": [
+                                            {
+                                                "stat": "UNDEFINED", 
+                                                "value": "2915000"
+                                            }
+                                        ]
+                                    }, 
+                                    {
+                                        "stat": "walks", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "walkRequestOrigin_Requested", 
+                                        "substat": [
+                                            {
+                                                "stat": "Data", 
+                                                "value": "0"
+                                            }, 
+                                            {
+                                                "stat": "Inst", 
+                                                "value": "0"
+                                            }, 
+                                            {
+                                                "stat": "total", 
+                                                "value": "0"
+                                            }
+                                        ]
+                                    }, 
+                                    {
+                                        "stat": "walkRequestOrigin_Completed", 
+                                        "substat": [
+                                            {
+                                                "stat": "Data", 
+                                                "value": "0"
+                                            }, 
+                                            {
+                                                "stat": "Inst", 
+                                                "value": "0"
+                                            }, 
+                                            {
+                                                "stat": "total", 
+                                                "value": "0"
+                                            }
+                                        ]
+                                    }, 
+                                    {
+                                        "stat": "walkRequestOrigin", 
+                                        "substat": [
+                                            {
+                                                "stat": "total", 
+                                                "value": "0"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "inst_hits", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "inst_misses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "read_hits", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "read_misses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "write_hits", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "write_misses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "flush_tlb", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "flush_tlb_mva", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "flush_tlb_mva_asid", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "flush_tlb_asid", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "flush_entries", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "align_faults", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "prefetch_faults", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "domain_faults", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "perms_faults", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "read_accesses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "write_accesses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "inst_accesses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "hits", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "misses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "accesses", 
+                                "value": "0"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "istage2_mmu", 
+                        "substat": [
+                            {
+                                "stat": "stage2_tlb", 
+                                "substat": [
+                                    {
+                                        "stat": "walker", 
+                                        "substat": [
+                                            {
+                                                "stat": "pwrStateResidencyTicks", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "UNDEFINED", 
+                                                        "value": "2915000"
+                                                    }
+                                                ]
+                                            }, 
+                                            {
+                                                "stat": "walks", 
+                                                "value": "0"
+                                            }, 
+                                            {
+                                                "stat": "walkRequestOrigin_Requested", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "Data", 
+                                                        "value": "0"
+                                                    }, 
+                                                    {
+                                                        "stat": "Inst", 
+                                                        "value": "0"
+                                                    }, 
+                                                    {
+                                                        "stat": "total", 
+                                                        "value": "0"
+                                                    }
+                                                ]
+                                            }, 
+                                            {
+                                                "stat": "walkRequestOrigin_Completed", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "Data", 
+                                                        "value": "0"
+                                                    }, 
+                                                    {
+                                                        "stat": "Inst", 
+                                                        "value": "0"
+                                                    }, 
+                                                    {
+                                                        "stat": "total", 
+                                                        "value": "0"
+                                                    }
+                                                ]
+                                            }, 
+                                            {
+                                                "stat": "walkRequestOrigin", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "total", 
+                                                        "value": "0"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }, 
+                                    {
+                                        "stat": "inst_hits", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "inst_misses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "read_hits", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "read_misses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "write_hits", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "write_misses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "flush_tlb", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "flush_tlb_mva", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "flush_tlb_mva_asid", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "flush_tlb_asid", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "flush_entries", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "align_faults", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "prefetch_faults", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "domain_faults", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "perms_faults", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "read_accesses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "write_accesses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "inst_accesses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "hits", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "misses", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "accesses", 
+                                        "value": "0"
+                                    }
+                                ]
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "itb", 
+                        "substat": [
+                            {
+                                "stat": "walker", 
+                                "substat": [
+                                    {
+                                        "stat": "pwrStateResidencyTicks", 
+                                        "substat": [
+                                            {
+                                                "stat": "UNDEFINED", 
+                                                "value": "2915000"
+                                            }
+                                        ]
+                                    }, 
+                                    {
+                                        "stat": "walks", 
+                                        "value": "0"
+                                    }, 
+                                    {
+                                        "stat": "walkRequestOrigin_Requested", 
+                                        "substat": [
+                                            {
+                                                "stat": "Data", 
+                                                "value": "0"
+                                            }, 
+                                            {
+                                                "stat": "Inst", 
+                                                "value": "0"
+                                            }, 
+                                            {
+                                                "stat": "total", 
+                                                "value": "0"
+                                            }
+                                        ]
+                                    }, 
+                                    {
+                                        "stat": "walkRequestOrigin_Completed", 
+                                        "substat": [
+                                            {
+                                                "stat": "Data", 
+                                                "value": "0"
+                                            }, 
+                                            {
+                                                "stat": "Inst", 
+                                                "value": "0"
+                                            }, 
+                                            {
+                                                "stat": "total", 
+                                                "value": "0"
+                                            }
+                                        ]
+                                    }, 
+                                    {
+                                        "stat": "walkRequestOrigin", 
+                                        "substat": [
+                                            {
+                                                "stat": "total", 
+                                                "value": "0"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }, 
+                            {
+                                "stat": "inst_hits", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "inst_misses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "read_hits", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "read_misses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "write_hits", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "write_misses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "flush_tlb", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "flush_tlb_mva", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "flush_tlb_mva_asid", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "flush_tlb_asid", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "flush_entries", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "align_faults", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "prefetch_faults", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "domain_faults", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "perms_faults", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "read_accesses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "write_accesses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "inst_accesses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "hits", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "misses", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "accesses", 
+                                "value": "0"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "workload", 
+                        "substat": [
+                            {
+                                "stat": "num_syscalls", 
+                                "value": "13"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "pwrStateResidencyTicks", 
+                        "substat": [
+                            {
+                                "stat": "ON", 
+                                "value": "2915000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "numCycles", 
+                        "value": "5831"
+                    }, 
+                    {
+                        "stat": "numWorkItemsStarted", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "numWorkItemsCompleted", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "committedInsts", 
+                        "value": "5014"
+                    }, 
+                    {
+                        "stat": "committedOps", 
+                        "value": "5818"
+                    }, 
+                    {
+                        "stat": "num_int_alu_accesses", 
+                        "value": "4977"
+                    }, 
+                    {
+                        "stat": "num_fp_alu_accesses", 
+                        "value": "16"
+                    }, 
+                    {
+                        "stat": "num_func_calls", 
+                        "value": "215"
+                    }, 
+                    {
+                        "stat": "num_conditional_control_insts", 
+                        "value": "800"
+                    }, 
+                    {
+                        "stat": "num_int_insts", 
+                        "value": "4977"
+                    }, 
+                    {
+                        "stat": "num_fp_insts", 
+                        "value": "16"
+                    }, 
+                    {
+                        "stat": "num_int_register_reads", 
+                        "value": "8083"
+                    }, 
+                    {
+                        "stat": "num_int_register_writes", 
+                        "value": "2992"
+                    }, 
+                    {
+                        "stat": "num_fp_register_reads", 
+                        "value": "16"
+                    }, 
+                    {
+                        "stat": "num_fp_register_writes", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "num_cc_register_reads", 
+                        "value": "17495"
+                    }, 
+                    {
+                        "stat": "num_cc_register_writes", 
+                        "value": "2647"
+                    }, 
+                    {
+                        "stat": "num_mem_refs", 
+                        "value": "2035"
+                    }, 
+                    {
+                        "stat": "num_load_insts", 
+                        "value": "1085"
+                    }, 
+                    {
+                        "stat": "num_store_insts", 
+                        "value": "950"
+                    }, 
+                    {
+                        "stat": "num_idle_cycles", 
+                        "value": "0.002000"
+                    }, 
+                    {
+                        "stat": "num_busy_cycles", 
+                        "value": "5830.998000"
+                    }, 
+                    {
+                        "stat": "not_idle_fraction", 
+                        "value": "1.000000"
+                    }, 
+                    {
+                        "stat": "idle_fraction", 
+                        "value": "0.000000"
+                    }, 
+                    {
+                        "stat": "Branches", 
+                        "value": "1107"
+                    }, 
+                    {
+                        "stat": "op_class", 
+                        "substat": [
+                            {
+                                "stat": "No_OpClass", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "IntAlu", 
+                                "value": "3789"
+                            }, 
+                            {
+                                "stat": "IntMult", 
+                                "value": "4"
+                            }, 
+                            {
+                                "stat": "IntDiv", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "FloatAdd", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "FloatCmp", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "FloatCvt", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "FloatMult", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "FloatDiv", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "FloatSqrt", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdAdd", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdAddAcc", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdAlu", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdCmp", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdCvt", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdMisc", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdMult", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdMultAcc", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdShift", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdShiftAcc", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdSqrt", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdFloatAdd", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdFloatAlu", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdFloatCmp", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdFloatCvt", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdFloatDiv", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdFloatMisc", 
+                                "value": "3"
+                            }, 
+                            {
+                                "stat": "SimdFloatMult", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdFloatMultAcc", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "SimdFloatSqrt", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "MemRead", 
+                                "value": "1085"
+                            }, 
+                            {
+                                "stat": "MemWrite", 
+                                "value": "950"
+                            }, 
+                            {
+                                "stat": "IprAccess", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "InstPrefetch", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "5831"
+                            }
+                        ]
+                    }
+                ]
+            }, 
+            {
+                "stat": "membus", 
+                "substat": [
+                    {
+                        "stat": "snoop_filter", 
+                        "substat": [
+                            {
+                                "stat": "tot_requests", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "hit_single_requests", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "hit_multi_requests", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "tot_snoops", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "hit_single_snoops", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "hit_multi_snoops", 
+                                "value": "0"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "pwrStateResidencyTicks", 
+                        "substat": [
+                            {
+                                "stat": "UNDEFINED", 
+                                "value": "2915000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "trans_dist", 
+                        "substat": [
+                            {
+                                "stat": "ReadReq", 
+                                "value": "6077"
+                            }, 
+                            {
+                                "stat": "ReadResp", 
+                                "value": "6088"
+                            }, 
+                            {
+                                "stat": "WriteReq", 
+                                "value": "925"
+                            }, 
+                            {
+                                "stat": "WriteResp", 
+                                "value": "925"
+                            }, 
+                            {
+                                "stat": "LoadLockedReq", 
+                                "value": "11"
+                            }, 
+                            {
+                                "stat": "StoreCondReq", 
+                                "value": "11"
+                            }, 
+                            {
+                                "stat": "StoreCondResp", 
+                                "value": "11"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "pkt_count_system", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "icache_port", 
+                                        "substat": [
+                                            {
+                                                "stat": "system", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "mem_ctrls", 
+                                                        "substat": [
+                                                            {
+                                                                "stat": "port", 
+                                                                "value": "10054"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }, 
+                                    {
+                                        "stat": "dcache_port", 
+                                        "substat": [
+                                            {
+                                                "stat": "system", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "mem_ctrls", 
+                                                        "substat": [
+                                                            {
+                                                                "stat": "port", 
+                                                                "value": "3994"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "pkt_count", 
+                        "substat": [
+                            {
+                                "stat": "total", 
+                                "value": "14048"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "pkt_size_system", 
+                        "substat": [
+                            {
+                                "stat": "cpu", 
+                                "substat": [
+                                    {
+                                        "stat": "icache_port", 
+                                        "substat": [
+                                            {
+                                                "stat": "system", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "mem_ctrls", 
+                                                        "substat": [
+                                                            {
+                                                                "stat": "port", 
+                                                                "value": "20108"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }, 
+                                    {
+                                        "stat": "dcache_port", 
+                                        "substat": [
+                                            {
+                                                "stat": "system", 
+                                                "substat": [
+                                                    {
+                                                        "stat": "mem_ctrls", 
+                                                        "substat": [
+                                                            {
+                                                                "stat": "port", 
+                                                                "value": "8368"
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "pkt_size", 
+                        "substat": [
+                            {
+                                "stat": "total", 
+                                "value": "28476"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "snoops", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "snoopTraffic", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "snoop_fanout", 
+                        "substat": [
+                            {
+                                "stat": "samples", 
+                                "value": "7024"
+                            }, 
+                            {
+                                "stat": "mean", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "stdev", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "underflows", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "overflows", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "min_value", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "max_value", 
+                                "value": "0"
+                            }, 
+                            {
+                                "stat": "total", 
+                                "value": "7024"
+                            }
+                        ]
+                    }, 
+                    {
+                        "stat": "snoop_fanout", 
+                        "value": "0"
+                    }, 
+                    {
+                        "stat": "snoop_fanout", 
+                        "value": "1"
+                    }
+                ]
+            }
+        ]
+    }
+]

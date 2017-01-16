@@ -380,12 +380,18 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'mockdata/{,*/}*.{json}'
           ]
         }, {
           expand: true,
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
+          src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: '.tmp/mockdata',
+          dest: '<%= yeoman.dist %>/mockdata',
           src: ['generated/*']
         }, {
           expand: true,
