@@ -5,6 +5,7 @@ version 0.15.1.
 
 ## Build & development
 
+Run npm install && bower install if clean clone from git
 Run `grunt` for building and `grunt serve` for preview.
 
 ## Testing
