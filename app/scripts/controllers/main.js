@@ -248,13 +248,13 @@ angular.module('interfaceApp')
         return console.log(node);
       };
     })(this);
-    stats.fetch('/flare_with_color.json').success((function() {
-      return function(data) {
-        console.log(data);
-        return $scope.tree = data;
-      };
-    })(this));
-    return $scope.tree = {};
+    //stats.fetch('/flare_with_color.json').success((function() {
+      //return function(data) {
+        //console.log(data);
+        //return $scope.tree = data;
+      //};
+    //})(this));
+    //return $scope.tree = {};
 
 
   });
