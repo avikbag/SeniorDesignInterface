@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'chart.js',
-    'ngMaterial'
+    'ngMaterial',
+    'ngFileUpload'
   ])
   .config(function ($routeProvider) {
     $routeProvider

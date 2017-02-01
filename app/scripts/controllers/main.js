@@ -8,7 +8,7 @@
  * Controller of the interfaceApp
  */
 angular.module('interfaceApp')
-  .controller('MainCtrl', function ($scope, $http, $mdSidenav, stats) {
+  .controller('MainCtrl', function ($scope, $http, $mdSidenav, stats, Upload) {
     /*
     var dir = "/src.json"
     stats.fetch(dir).then(function(msg){
@@ -33,6 +33,27 @@ angular.module('interfaceApp')
     var checker = 0;
     var dir_template = "mockdata/job_output";
     
+    // Watcher for drap and drop section
+    $scope.$watch('files', function() {
+      $scope.upload($scope.files);
+    });
+    $scope.upload = function(files) {
+      if (files && files.length) {
+        for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          var fr = new FileReader();
+          console.log(file);
+          fr.readAsText(file);
+          console.log(fr.result);
+          var jsonTester = JSON.stringify(file);
+          console.log(jsonTester);
+        }
+      }
+    }
+    $scope.complete = function(content) {
+      console.log(content); // process content
+    }
+
     $scope.info = [];
     for(var i = 0; i < 6 ; i++){
       $scope.job_labels.push("job"+i);
