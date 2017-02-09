@@ -59,5 +59,6 @@
     */
     (() => {
       "use strict";
+				console.log("Detected change");
         document.getElementById('file-input').onchange = initUpload;
     })();
