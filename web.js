@@ -12,6 +12,12 @@ app.listen(process.env.PORT || 5000);
  *  * Load the S3 information from the environment variables.
  *  */
 const S3_BUCKET = process.env.S3_BUCKET;
+  
+/*
+  *   * Respond to GET requests to /account.
+  *   * Upon request, render the 'account.html' web page in views/ directory.
+  *   */
+app.get('/index', (req, res) => res.render('index.html'));
 
 app.get('/sign-s3', (req, res) => {
     const s3 = new aws.S3();
@@ -37,4 +43,13 @@ app.get('/sign-s3', (req, res) => {
           res.write(JSON.stringify(returnData));
           res.end();
         });
+});
+
+/*
+ * Respond to POST requests to /submit_form.
+ * This function needs to be completed to handle the information in
+ * a way that suits your application.
+ */
+app.post('/save-details', (req, res) => {
+  // TODO: Read POSTed form data and do something useful
 });

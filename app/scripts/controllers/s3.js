@@ -48,6 +48,7 @@
       "use strict";
       const files = document.getElementById('file-input').files;
       const file = files[0];
+      console.log("Test");
       if(file == null){
         return alert('No file selected.');
       }
