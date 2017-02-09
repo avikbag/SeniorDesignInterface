@@ -258,24 +258,6 @@ angular.module('interfaceApp')
       }
     }
       
-    // The tree map stuff.   
-    $scope.formatName = (function() {
-    return function(name) {
-      return name;
-      };
-    })(this);
-    $scope.onDetail = (function() {
-      return function(node) {
-        return console.log(node);
-      };
-    })(this);
-    //stats.fetch('/flare_with_color.json').success((function() {
-      //return function(data) {
-        //console.log(data);
-        //return $scope.tree = data;
-      //};
-    //})(this));
-    //return $scope.tree = {};
 
 
   });
