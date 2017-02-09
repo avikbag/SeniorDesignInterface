@@ -1,0 +1,6 @@
+.drop-box{
+  border: 5px solid blue;
+}
+.dragover {
+  border: 5px solid red;
+}
