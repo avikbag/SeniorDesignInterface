@@ -5,6 +5,7 @@ var aws = require('aws-sdk')
 var app = express();
 
 app.use(morgan('dev'));
+app.set('dist', './dist');
 app.use(gzippo.staticGzip("" + __dirname + "/dist"));
 app.engine('html', require('ejs').renderFile);
 app.listen(process.env.PORT || 5000);
