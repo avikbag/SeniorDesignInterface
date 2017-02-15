@@ -5,10 +5,6 @@ var aws = require('aws-sdk');
 var cors = require('cors');
 var app = express();
 
-const corsOptions = {
-  origin: 'http://archeval2.herokuapp.com';
-}
-app.use(cors(corsOptions));
 
 app.use(morgan('dev'));
 app.set('dist', './dist');
