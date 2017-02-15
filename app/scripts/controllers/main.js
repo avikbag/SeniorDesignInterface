@@ -54,6 +54,12 @@ angular.module('interfaceApp')
       console.log(content); // process content
     }
 
+    var testUrl = 'https://s3-us-west-2.amazonaws.com/archeval/job_outputM.json'
+    
+    stats.fetch(testUrl).then(function(msg){
+      console.log(msg);
+    });
+
     $scope.info = [];
     for(var i = 0; i < 6 ; i++){
       $scope.job_labels.push("job"+i);
