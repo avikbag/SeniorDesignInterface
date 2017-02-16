@@ -1,76 +1,135 @@
-<div class="container">
-  <md-sidenav class="md-sidenav-right" md-component-id="right"
-                md-disable-backdrop md-whiteframe="4">
+<!--<div class="container">-->
+  <!--<md-sidenav class="md-sidenav-right" md-component-id="right"-->
+                <!--md-disable-backdrop md-whiteframe="4">-->
 
-    <md-toolbar class="md-accent">
-        <div layout="row">
-          <h3 flex style="margin-left:10px;"> Job Details </h3>
-          <md-button class="md-raised md-primary" ng-click="toggleRight()">
-            <md-tooltip md-direction="top">
-              Close side nav
-            </md-tooltip> 
-            <md-icon md-font-library="material-icons">
-              close
-            </md-icon>
-          </md-button>
-        </div>
-      </md-toolbar>
-      <md-content>
-        <md-content layout-margin ng-repeat="detail in info">
-        <h4>{{detail.data.job_details.job_name}} </h4>
-          {{detail.data.job_details.job_timestamp}}
-        </md-content>
-      </md-content>
+    <!--<md-toolbar class="md-accent">-->
+        <!--<div layout="row">-->
+          <!--<h3 flex style="margin-left:10px;"> Job Details </h3>-->
+          <!--<md-button class="md-raised md-primary" ng-click="toggleRight()">-->
+            <!--<md-tooltip md-direction="top">-->
+              <!--Close side nav-->
+            <!--</md-tooltip> -->
+            <!--<md-icon md-font-library="material-icons">-->
+              <!--close-->
+            <!--</md-icon>-->
+          <!--</md-button>-->
+        <!--</div>-->
+      <!--</md-toolbar>-->
+      <!--<md-content>-->
+        <!--<md-content layout-margin ng-repeat="detail in info">-->
+        <!--<h4>{{detail.data.job_details.job_name}} </h4>-->
+          <!--{{detail.data.job_details.job_timestamp}}-->
+        <!--</md-content>-->
+      <!--</md-content>-->
 
-    </md-sidenav>
+    <!--</md-sidenav>-->
 
-  <md-content class="md-padding">
-    <md-tabs class="md-primary" md-dynamic-height md-border-bottom>
-      <md-tab id="tab3">
-        <md-tab-label>Area</md-tab-label>
-        <md-tab-body>
-        <div flex layout="row" layout-align="end center">
-          <md-button class="md-raised md-accent" ng-click="toggleRight()">
-            <md-tooltip md-direction="top">
-              Job Details
-            </md-tooltip> 
-            <md-icon md-font-library="material-icons">
-              menu
-            </md-icon></md-button>
-        </div>
-  <canvas id="polar-area" class="chart chart-polar-area" 
-    chart-data="area" 
-    chart-labels="job_labels" 
-    chart-options="optionsrv"
-    >
-  </canvas>
-        </md-tab-body>
-      </md-tab>
-      <md-tab id="tab4">
-        <md-tab-label>Power</md-tab-label>
-        <md-tab-body>
-        <div flex layout="row" layout-align="end">
-          <md-button class="md-raised md-accent" ng-click="toggleRight()">
-            <md-tooltip md-direction="top">
-              Job Details
-            </md-tooltip> 
-            <md-icon md-font-library="material-icons">
-              menu
-            </md-icon></md-button>
-        </div>
-  <canvas id="bar" class="chart chart-bar" 
-    chart-data="power" 
-    chart-labels="job_labels" 
-    chart-series="powerSeries"
-    chart-options="optionsPow"
-    >
-    </canvas>
-        </md-tab-body>
-      </md-tab>
-    </md-tabs>
-  </md-content>
+  <!--<md-content class="md-padding">-->
+    <!--<md-tabs class="md-primary" md-dynamic-height md-border-bottom>-->
+      <!--<md-tab id="tab3">-->
+        <!--<md-tab-label>Area</md-tab-label>-->
+        <!--<md-tab-body>-->
+        <!--<div flex layout="row" layout-align="end center">-->
+          <!--<md-button class="md-raised md-accent" ng-click="toggleRight()">-->
+            <!--<md-tooltip md-direction="top">-->
+              <!--Job Details-->
+            <!--</md-tooltip> -->
+            <!--<md-icon md-font-library="material-icons">-->
+              <!--menu-->
+            <!--</md-icon></md-button>-->
+        <!--</div>-->
+  <!--<canvas id="polar-area" class="chart chart-polar-area" -->
+    <!--chart-data="area" -->
+    <!--chart-labels="job_labels" -->
+    <!--chart-options="optionsrv"-->
+    <!-->-->
+  <!--</canvas>-->
+        <!--</md-tab-body>-->
+      <!--</md-tab>-->
+      <!--<md-tab id="tab4">-->
+        <!--<md-tab-label>Power</md-tab-label>-->
+        <!--<md-tab-body>-->
+        <!--<div flex layout="row" layout-align="end">-->
+          <!--<md-button class="md-raised md-accent" ng-click="toggleRight()">-->
+            <!--<md-tooltip md-direction="top">-->
+              <!--Job Details-->
+            <!--</md-tooltip> -->
+            <!--<md-icon md-font-library="material-icons">-->
+              <!--menu-->
+            <!--</md-icon></md-button>-->
+        <!--</div>-->
+  <!--<canvas id="bar" class="chart chart-bar" -->
+    <!--chart-data="power" -->
+    <!--chart-labels="job_labels" -->
+    <!--chart-series="powerSeries"-->
+    <!--chart-options="optionsPow"-->
+    <!-->-->
+    <!--</canvas>-->
+        <!--</md-tab-body>-->
+      <!--</md-tab>-->
+    <!--</md-tabs>-->
+  <!--</md-content>-->
 	
 <script>
+    /*
+      Function to carry out the actual PUT request to S3 using the signed request from the app.
+    */
+    function uploadFile(file, signedRequest, url){
+      const xhr = new XMLHttpRequest();
+      xhr.open('PUT', signedRequest);
+      xhr.onreadystatechange = () => {
+        if(xhr.readyState === 4){
+          if(xhr.status === 200){
+            <!--document.getElementById('preview').src = url;-->
+            <!--document.getElementById('avatar-url').value = url;-->
+						console.log("Into Upload pass");
+          }
+          else{
+            alert('Could not upload file.');
+          }
+        }
+      };
+			console.log("Just before sending the file");
+      xhr.send(file);
+			console.log("Just after sending the file");
+    }
+    /*
+      Function to get the temporary signed request from the app.
+      If request successful, continue to upload the file using this signed
+      request.
+    */
+    function getSignedRequest(file){
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', `/sign-s3?file-name=${file.name}&file-type=${file.type}`);
+			console.log("Pass");
+      xhr.onreadystatechange = () => {
+			console.log("Pass2");
+        if(xhr.readyState === 4){
+					console.log("Pass3");
+          if(xhr.status === 200){
+            const response = JSON.parse(xhr.responseText);
+						console.log("Maybe download link? :- " + response.url);
+            uploadFile(file, response.signedRequest, response.url);
+          }
+          else{
+            alert('Could not get signed URL.');
+          }
+        }
+      };
+      xhr.send();
+    }
+    /*
+     Function called when file input updated. If there is a file selected, then
+     start upload procedure by asking for a signed request from the app.
+    */
+    function initUpload(){
+      const files = document.getElementById('file-input').files;
+      const file = files[0];
+      if(file == null){
+        return alert('No file selected.');
+      }
+      getSignedRequest(file);
+    }
     /*
      Bind listeners when the page loads.
     */
