@@ -1,75 +1,3 @@
-<!--<div class="container">-->
-  <!--<md-sidenav class="md-sidenav-right" md-component-id="right"-->
-                <!--md-disable-backdrop md-whiteframe="4">-->
-
-    <!--<md-toolbar class="md-accent">-->
-        <!--<div layout="row">-->
-          <!--<h3 flex style="margin-left:10px;"> Job Details </h3>-->
-          <!--<md-button class="md-raised md-primary" ng-click="toggleRight()">-->
-            <!--<md-tooltip md-direction="top">-->
-              <!--Close side nav-->
-            <!--</md-tooltip> -->
-            <!--<md-icon md-font-library="material-icons">-->
-              <!--close-->
-            <!--</md-icon>-->
-          <!--</md-button>-->
-        <!--</div>-->
-      <!--</md-toolbar>-->
-      <!--<md-content>-->
-        <!--<md-content layout-margin ng-repeat="detail in info">-->
-        <!--<h4>{{detail.data.job_details.job_name}} </h4>-->
-          <!--{{detail.data.job_details.job_timestamp}}-->
-        <!--</md-content>-->
-      <!--</md-content>-->
-
-    <!--</md-sidenav>-->
-
-  <!--<md-content class="md-padding">-->
-    <!--<md-tabs class="md-primary" md-dynamic-height md-border-bottom>-->
-      <!--<md-tab id="tab3">-->
-        <!--<md-tab-label>Area</md-tab-label>-->
-        <!--<md-tab-body>-->
-        <!--<div flex layout="row" layout-align="end center">-->
-          <!--<md-button class="md-raised md-accent" ng-click="toggleRight()">-->
-            <!--<md-tooltip md-direction="top">-->
-              <!--Job Details-->
-            <!--</md-tooltip> -->
-            <!--<md-icon md-font-library="material-icons">-->
-              <!--menu-->
-            <!--</md-icon></md-button>-->
-        <!--</div>-->
-  <!--<canvas id="polar-area" class="chart chart-polar-area" -->
-    <!--chart-data="area" -->
-    <!--chart-labels="job_labels" -->
-    <!--chart-options="optionsrv"-->
-    <!-->-->
-  <!--</canvas>-->
-        <!--</md-tab-body>-->
-      <!--</md-tab>-->
-      <!--<md-tab id="tab4">-->
-        <!--<md-tab-label>Power</md-tab-label>-->
-        <!--<md-tab-body>-->
-        <!--<div flex layout="row" layout-align="end">-->
-          <!--<md-button class="md-raised md-accent" ng-click="toggleRight()">-->
-            <!--<md-tooltip md-direction="top">-->
-              <!--Job Details-->
-            <!--</md-tooltip> -->
-            <!--<md-icon md-font-library="material-icons">-->
-              <!--menu-->
-            <!--</md-icon></md-button>-->
-        <!--</div>-->
-  <!--<canvas id="bar" class="chart chart-bar" -->
-    <!--chart-data="power" -->
-    <!--chart-labels="job_labels" -->
-    <!--chart-series="powerSeries"-->
-    <!--chart-options="optionsPow"-->
-    <!-->-->
-    <!--</canvas>-->
-        <!--</md-tab-body>-->
-      <!--</md-tab>-->
-    <!--</md-tabs>-->
-  <!--</md-content>-->
-	
 <script>
     /*
       Function to carry out the actual PUT request to S3 using the signed request from the app.
@@ -82,16 +10,13 @@
           if(xhr.status === 200){
             <!--document.getElementById('preview').src = url;-->
             <!--document.getElementById('avatar-url').value = url;-->
-						console.log("Into Upload pass");
           }
           else{
             alert('Could not upload file.');
           }
         }
       };
-			console.log("Just before sending the file");
       xhr.send(file);
-			console.log("Just after sending the file");
     }
     /*
       Function to get the temporary signed request from the app.
@@ -101,14 +26,10 @@
     function getSignedRequest(file){
       const xhr = new XMLHttpRequest();
       xhr.open('GET', `/sign-s3?file-name=${file.name}&file-type=${file.type}`);
-			console.log("Pass");
       xhr.onreadystatechange = () => {
-			console.log("Pass2");
         if(xhr.readyState === 4){
-					console.log("Pass3");
           if(xhr.status === 200){
             const response = JSON.parse(xhr.responseText);
-						console.log("Maybe download link? :- " + response.url);
             uploadFile(file, response.signedRequest, response.url);
           }
           else{
@@ -137,15 +58,159 @@
         document.getElementById('file-input').onchange = initUpload;
     })();
  </script>
+<div class="container">
+  <md-sidenav class="md-sidenav-right" md-component-id="right"
+                md-disable-backdrop md-whiteframe="4">
 
+    <md-toolbar class="md-accent">
+        <div layout="row">
+          <h3 flex style="margin-left:10px;"> Job Details </h3>
+          <md-button class="md-raised md-primary" ng-click="toggleRight()">
+            <md-tooltip md-direction="top">
+              Close side nav
+            </md-tooltip> 
+            <md-icon md-font-library="material-icons">
+              close
+            </md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-content>
+        <md-content layout-margin ng-repeat="detail in info">
+        <h4>{{detail.data.job_details.job_name}} </h4>
+          {{detail.data.job_details.job_timestamp}}
+        </md-content>
+      </md-content>
 
-	<input type="file" id="file-input">
-	<p id="status">Please select a file</p>
+    </md-sidenav>
 
-	<form method="POST" action="/save-details">
-  	<input type="text" name="username" placeholder="Username"><br>
-  	<input type="text" name="full-name" placeholder="Full name"><br><br>
-  	<input type="submit" value="Update profile">
-	</form>
+  <md-content class="md-padding">
+    <md-tabs class="md-primary" md-dynamic-height md-border-bottom>
+      <md-tab id="tab1">
+        <md-tab-label>Op Code Distribution</md-tab-label>
+        <md-tab-body>
+        <div flex layout="row" layout-align="end center">
+           <md-radio-group flex ng-model="graphic" layout="row" style="margin:20px">
+            <md-radio-button ng-model="graphic" value=0 class="md-primary">Top level overview</md-radio-button>
+            <md-radio-button ng-model="graphic" value=1> Radar View </md-radio-button>
+            <md-radio-button ng-model="graphic" value=2> Op Code Comparison </md-radio-button>
+           </md-radio-group>
+          <md-button class="md-raised md-accent" ng-click="toggleRight()">
+            <md-tooltip md-direction="top">
+              Job Details
+            </md-tooltip> 
+            <md-icon md-font-library="material-icons">
+              menu
+            </md-icon></md-button>
+        </div>
+          <div ng-show="graphic == 0">
+          <canvas id="bar" class="chart chart-bar" 
+            chart-data="values" 
+            chart-labels="job_labels" 
+            chart-series="class_type"
+            chart-options="options"></canvas></div>
+          
+          <div ng-show="graphic == 1">
+          <canvas id="radar" class="chart chart-radar"
+            chart-data="valuesRV" 
+            chart-labels="job_labelsRV" 
+            chart-series="class_typeRV"
+            chart-options="optionsrv"></canvas></div>
+          
+          <div ng-show="graphic == 2">
+            <div layout="row">
+              <div flex style="margin-left: 10px; margin-right: 10px">
+                <md-select placeholder="Choose Job for comparison" ng-model="job0">
+                  <md-option ng-value="$index" ng-repeat="job0 in job_labels">{{job0}}</md-option>
+                </md-select>
+              <canvas id="pie" class="chart chart-pie"
+                chart-data=valuesRV[job0] 
+                chart-labels="job_labelsRV"
+                chart-series="class_type"
+                chart-options="options2"></canvas>
+              </div>
+
+              <div flex style="margin-left: 10px; margin-right: 10px">
+                <md-select placeholder="Choose Job for comparison" ng-model="job1">
+                  <md-option ng-value="$index" ng-repeat="job1 in job_labels">{{job1}}</md-option>
+                </md-select>
+                <canvas id="pie" class="chart chart-pie"
+                  chart-data=valuesRV[job1] 
+                  chart-labels="job_labelsRV"
+                  chart-series="class_type"
+                  chart-options="options2">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="tab2">
+        <md-tab-label>Execution Times</md-tab-label>
+        <md-tab-body>
+        <div flex layout="row" layout-align="end center">
+          <md-button class="md-raised md-accent" ng-click="toggleRight()">
+            <md-tooltip md-direction="top">
+              Job Details
+            </md-tooltip> 
+            <md-icon md-font-library="material-icons">
+              menu
+            </md-icon></md-button>
+        </div>
+      <canvas id="bar" class="chart chart-bar" 
+        chart-data="execTimes" 
+        chart-labels="job_labels" 
+        chart-options="options3">
+      </canvas>
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="tab3">
+        <md-tab-label>Area</md-tab-label>
+        <md-tab-body>
+        <div flex layout="row" layout-align="end center">
+          <md-button class="md-raised md-accent" ng-click="toggleRight()">
+            <md-tooltip md-direction="top">
+              Job Details
+            </md-tooltip> 
+            <md-icon md-font-library="material-icons">
+              menu
+            </md-icon></md-button>
+        </div>
+  <canvas id="polar-area" class="chart chart-polar-area" 
+    chart-data="area" 
+    chart-labels="job_labels" 
+    chart-options="optionsrv"
+    >
+  </canvas>
+        </md-tab-body>
+      </md-tab>
+      <md-tab id="tab4">
+        <md-tab-label>Power</md-tab-label>
+        <md-tab-body>
+        <div flex layout="row" layout-align="end">
+          <md-button class="md-raised md-accent" ng-click="toggleRight()">
+            <md-tooltip md-direction="top">
+              Job Details
+            </md-tooltip> 
+            <md-icon md-font-library="material-icons">
+              menu
+            </md-icon></md-button>
+        </div>
+  <canvas id="bar" class="chart chart-bar" 
+    chart-data="power" 
+    chart-labels="job_labels" 
+    chart-series="powerSeries"
+    chart-options="optionsPow"
+    >
+    </canvas>
+        </md-tab-body>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+	
+	<md-button class="md-raised md-primary">
+		<input style="color: rgba(255, 255, 255, 0); position: static;" type="file" id="file-input">
+    <p>Input File</p>
+	</md-button>
 
 </div>
