@@ -23,6 +23,7 @@
       If request successful, continue to upload the file using this signed
       request.
     */
+    var test;
     function getSignedRequest(file){
       const xhr = new XMLHttpRequest();
       xhr.open('GET', `/sign-s3?file-name=${file.name}&file-type=${file.type}`);
@@ -30,8 +31,8 @@
         if(xhr.readyState === 4){
           if(xhr.status === 200){
             const response = JSON.parse(xhr.responseText);
-            var test = response.url;
-            console.log("variable tester" + test);
+            test = response.url;
+            console.log("variable tester " + test);
             uploadFile(file, response.signedRequest, response.url);
           }
           else{

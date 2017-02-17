@@ -55,7 +55,7 @@ angular.module('interfaceApp')
     }
 
     var testUrl = 'https://s3-us-west-2.amazonaws.com/archeval/job_outputM.json'
-    
+    console.log("in controller " + test);
     stats.fetch(testUrl).then(function(msg){
       console.log(msg);
     });
