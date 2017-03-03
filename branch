@@ -1,0 +1,24 @@
+#!/bin/bash
+
+MESSAGE=$1
+
+## TO build the dist files
+grunt build
+
+## Include all the mock data
+cp -r app/mockdata/ dist/
+cd dist/
+mkdir mockdata
+mv job_output* mockdata
+cd ..
+
+git add .
+echo "Git add all complete"
+
+git commit -m "$MESSAGE"
+
+git push origin upload-visual-to-angular
+
+## Deploy push to heroku servers
+##git push heroku master
+
