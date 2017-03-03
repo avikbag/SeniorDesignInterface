@@ -9,6 +9,10 @@
  */
 angular.module('interfaceApp')
   .controller('MainCtrl', function ($scope, $http, $mdSidenav, stats, Upload) {
+    // adding test upload using ng upload
+    
+    
+
     /*
     var dir = "/src.json"
     stats.fetch(dir).then(function(msg){
@@ -33,32 +37,35 @@ angular.module('interfaceApp')
     var checker = 0;
     var dir_template = "mockdata/job_output";
     
-    // Watcher for drap and drop section
-    $scope.$watch('files', function() {
-      $scope.upload($scope.files);
-    });
-    $scope.upload = function(files) {
-      if (files && files.length) {
-        for (var i = 0; i < files.length; i++) {
-          var file = files[i];
-          var fr = new FileReader();
-          console.log(file);
-          fr.readAsText(file);
-          console.log(fr.result);
-          var jsonTester = JSON.stringify(file);
-          console.log(jsonTester);
-        }
-      }
-    }
-    $scope.complete = function(content) {
-      console.log(content); // process content
-    }
 
     var testUrl = 'https://s3-us-west-2.amazonaws.com/archeval/job_outputM.json'
     console.log("in controller " + test);
     stats.fetch(testUrl).then(function(msg){
       console.log(msg);
     });
+
+    $scope.reader = function(){
+      console.log($scope.file);
+			getSignedRequest(file)
+    }
+
+    var getSignedRequest = function(file){
+     	const xhr = new XMLHttpRequest();
+  		xhr.open('GET', `/sign-s3?file-name=${file.name}&file-type=${file.type}`);
+  		xhr.onreadystatechange = () => {
+    	if(xhr.readyState === 4){
+      	if(xhr.status === 200){
+        	const response = JSON.parse(xhr.responseText);
+          console.log("This part works angularized")
+        	//uploadFile(file, response.signedRequest, response.url);
+      	  }
+      	else{
+        	alert('Could not get signed URL.');
+      	  }
+    	  } 
+  	  };
+      xhr.send();
+    }
 
     $scope.info = [];
     for(var i = 0; i < 6 ; i++){

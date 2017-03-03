@@ -61,10 +61,20 @@
         document.getElementById('file-input').onchange = initUpload;
     })();
  </script>
+
+		Upload on form submit or button click
+		<form ng-app="fileUpload" name="form">
+  		Single Image with validations
+  		<md-button class="md-raised md-primary" ngf-select ng-model="file" name="file" ngf-pattern="'.pdf'"
+    	ngf-accept="'pdf/*'" >Select</md-button>
+  		
+			<button type="submit" ng-click="reader()">submit</button>
+		</form>
+
 <div class="container">
   <md-sidenav class="md-sidenav-right" md-component-id="right"
                 md-disable-backdrop md-whiteframe="4">
-
+  
     <md-toolbar class="md-accent">
         <div layout="row">
           <h3 flex style="margin-left:10px;"> Job Details </h3>
