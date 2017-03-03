@@ -46,7 +46,7 @@ angular.module('interfaceApp')
 
     $scope.reader = function(){
       console.log($scope.file);
-			getSignedRequest(file)
+			getSignedRequest($scope.file)
     }
 
     var getSignedRequest = function(file){
