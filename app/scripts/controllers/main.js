@@ -38,11 +38,11 @@ angular.module('interfaceApp')
     var dir_template = "mockdata/job_output";
     
 
-    var testUrl = 'https://s3-us-west-2.amazonaws.com/archeval/job_outputM.json'
-    console.log("in controller " + test);
-    stats.fetch(testUrl).then(function(msg){
-      console.log(msg);
-    });
+    //var testUrl = 'https://s3-us-west-2.amazonaws.com/archeval/job_outputM.json'
+    //console.log("in controller " + test);
+    //stats.fetch(testUrl).then(function(msg){
+      //console.log(msg);
+    //});
 
     $scope.reader = function(){
       console.log($scope.file);
@@ -52,7 +52,7 @@ angular.module('interfaceApp')
     var getSignedRequest = function(file){
      	const xhr = new XMLHttpRequest();
 
-      console.log(file.name)
+      console.log(file)
   		xhr.open('GET','/sign-s3?file-name='+file.name+'&file-type='+file.type);
   		xhr.onreadystatechange = function() {
     	if(xhr.readyState === 4){
