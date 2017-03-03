@@ -51,8 +51,8 @@ angular.module('interfaceApp')
 
     var getSignedRequest = function(file){
      	const xhr = new XMLHttpRequest();
-  		xhr.open('GET', `/sign-s3?file-name=${file.name}&file-type=${file.type}`);
-  		xhr.onreadystatechange = () => {
+  		xhr.open('GET', '/sign-s3?file-name=${file.name}&file-type=${file.type}');
+  		xhr.onreadystatechange = function() {
     	if(xhr.readyState === 4){
       	if(xhr.status === 200){
         	const response = JSON.parse(xhr.responseText);
