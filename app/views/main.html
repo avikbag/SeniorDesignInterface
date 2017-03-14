@@ -62,24 +62,24 @@
     })();
  </script>
 
-		Upload on form submit or button click
-		<form ng-app="fileUpload" name="form">
-  		Single Image with validations
-  		<md-button class="md-raised md-primary" ngf-select ng-model="file" name="file" ngf-pattern="'.pdf'"
-    	ngf-accept="'pdf/*'" >Select</md-button>
-  		
-			<button type="submit" ng-click="reader()">submit</button>
-		</form>
+		<!--Upload on form submit or button click-->
+		<!--<form ng-app="fileUpload" name="form">-->
+      <!--Single Image with validations-->
+      <!--<md-button class="md-raised md-primary" ngf-select ng-model="file" name="file" ngf-pattern="'.pdf'"-->
+      <!--ngf-accept="'pdf/*'" >Select</md-button>-->
+      
+			<!--<button type="submit" ng-click="reader()">submit</button>-->
+		<!--</form>-->
 
 <div class="container">
   <md-sidenav class="md-sidenav-right" md-component-id="right"
                 md-disable-backdrop md-whiteframe="4">
   
-    <md-toolbar class="md-accent">
+    <md-toolbar class="md-accent" style="height: 7vh">
         <div layout="row">
           <h3 flex style="margin-left:10px;"> Job Details </h3>
-          <md-button class="md-raised md-primary" ng-click="toggleRight()">
-            <md-tooltip md-direction="top">
+          <md-button class="md-raised md-primary md-fab" ng-click="toggleRight()">
+            <md-tooltip md-direction="left">
               Close side nav
             </md-tooltip> 
             <md-icon md-font-library="material-icons">
@@ -88,12 +88,24 @@
           </md-button>
         </div>
       </md-toolbar>
+
       <md-content>
-        <md-content layout-margin ng-repeat="detail in info">
-        <h4>{{detail.data.job_details.job_name}} </h4>
-          {{detail.data.job_details.job_timestamp}}
+        <md-content layout-margin >
         </md-content>
       </md-content>
+      <md-subheader class="md-no-sticky"><h4 style="color: #388E3C;">Current Active</h4></md-subheader>
+	<md-list-item class="secondary-button-padding md-list-item-text" ng-click="null" layout="row" ng-repeat="detail in info">
+    <div layout="column">
+        <h5>{{detail.data.job_details.job_name}} </h5>
+        <p>{{detail.data.job_details.job_timestamp}}</p>
+    </div>
+
+    <md-button class="md-secondary md-icon-button" ng-click="doSecondaryAction($event)">
+      <md-icon md-font-library="material-icons">
+        delete_forever
+      </md-icon>
+    </md-button>
+  </md-list-item>
 
     </md-sidenav>
 
@@ -114,7 +126,16 @@
             </md-tooltip> 
             <md-icon md-font-library="material-icons">
               menu
-            </md-icon></md-button>
+            </md-icon>
+					</md-button>
+					<md-button class="md-fab md-hue-2 md-mini">
+            <md-tooltip md-direction="top">
+              Job output file upload
+            </md-tooltip> 
+						<md-icon md-font-library="material-icons">
+							file_upload 
+						</md-icon>
+					</md-button>
         </div>
           <div ng-show="graphic == 0">
           <canvas id="bar" class="chart chart-bar" 
@@ -221,6 +242,4 @@
     </md-tabs>
   </md-content>
 	
-		<input type="file" id="file-input">
-
 </div>
