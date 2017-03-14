@@ -97,7 +97,12 @@ angular.module('interfaceApp')
           //const response = JSON.parse(xhr.responseText);
           //console.log("This part works angularized")
           //uploadFile(file, response.signedRequest, response.url);
-            $mdToast.showSimple('Upload Succeeded, Data cached');
+						$mdToast.show(
+      				$mdToast.simple()
+       			 		.textContent('Upload Succeeded, Data cached')
+        				.position('Top Right' )
+        				.hideDelay(3000)
+    					);
           }
         else{
           
