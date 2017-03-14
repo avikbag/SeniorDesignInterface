@@ -51,11 +51,29 @@ angular.module('interfaceApp')
 
     var getSignedRequest = function(file){
       var req = '/sign-s3?file-name='+file.name+'&file-type='+file.type
-      console.log(typeof(req));
-      stats.fetch(req).then(function(msg){
-        $scope.signedRequest = msg.data.signedRequest
-        console.log(typeof($scope.signedRequest));
-      });
+      //console.log(typeof(req));
+      //stats.fetch(req).then(function(msg){
+        //$scope.signedRequest = msg.data.signedRequest
+        //console.log(typeof($scope.signedRequest));
+        //console.log(msg)
+      //});
+      const xhr = new XMLHttpRequest();
+
+      xhr.open('GET', req);
+      xhr.onreadystatechange = function() {
+      if(xhr.readyState === 4){
+        if(xhr.status === 200){
+          const response = JSON.parse(xhr.responseText);
+          console.log("checking get signed req");
+          console.log(response);
+          //uploadFile(file, response.signedRequest, response.url);
+          }
+        else{
+          alert('Could not get signed URL.');
+          }
+        } 
+      };
+      xhr.send();
 
 			//$http({
         //method: 'PUT',
