@@ -72,7 +72,7 @@ angular.module('interfaceApp')
     var uploadFiles = function(file, sr){
       const xhr = new XMLHttpRequest();
 
-      //console.log(file)
+      console.log(sr)
       xhr.open('PUT', sr);
       xhr.onreadystatechange = function() {
       if(xhr.readyState === 4){
