@@ -8,7 +8,7 @@
  * Controller of the interfaceApp
  */
 angular.module('interfaceApp')
-  .controller('MainCtrl', function ($scope, $http, $mdSidenav, stats, Upload) {
+  .controller('MainCtrl', function ($scope, $http, $mdSidenav, stats, Upload, $mdToast) {
     // adding test upload using ng upload
     
     
@@ -70,7 +70,7 @@ angular.module('interfaceApp')
           //uploadFile(file, response.signedRequest, response.url);
           }
         else{
-          alert('Could not get signed URL.');
+          $mdToast.showSimple('Upload Failed');
           }
         } 
       };
@@ -97,9 +97,10 @@ angular.module('interfaceApp')
           //const response = JSON.parse(xhr.responseText);
           //console.log("This part works angularized")
           //uploadFile(file, response.signedRequest, response.url);
+            $mdToast.showSimple('Upload Succeeded, Data cached');
           }
         else{
-          alert('Could not get signed URL.');
+          
           }
         } 
       };
