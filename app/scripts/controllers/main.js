@@ -38,11 +38,11 @@ angular.module('interfaceApp')
     var dir_template = "mockdata/job_output";
     
 
-    //var testUrl = 'https://s3-us-west-2.amazonaws.com/archeval/job_outputM.json'
-    //console.log("in controller " + test);
-    //stats.fetch(testUrl).then(function(msg){
-      //console.log(msg);
-    //});
+    var testUrl = 'https://s3-us-west-2.amazonaws.com/archeval/job_output2.json'
+    console.log("in controller " + test);
+    stats.fetch(testUrl).then(function(msg){
+      console.log(msg);
+    });
 
     $scope.reader = function(){
       console.log($scope.file);
