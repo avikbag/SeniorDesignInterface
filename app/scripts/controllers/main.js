@@ -11,18 +11,16 @@ angular.module('interfaceApp')
   .controller('MainCtrl', function ($scope, $http, $mdSidenav, stats, Upload, $mdToast, CacheFactory) {
     
     // Testing cache features using CacheFactory
-
-  	// Check to make sure the cache doesn't already exist
+    var profileCache;
+  	
+    // Check to make sure the cache doesn't already exist
   	if (!CacheFactory.get('profileCache')) {
     	profileCache = CacheFactory('profileCache', {
         maxAge: 60 * 60 * 1000, 
         deleteOnExpire: 'none',
-        storageMode: 'sessionStorage'
+        storageMode: 'localStorage'
 			});
   	}
-    else{
-      var profileCache;
-    }
     
     // Basic Variables for plotting 
     $scope.job_labels = [];
