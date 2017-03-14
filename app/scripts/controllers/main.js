@@ -13,7 +13,6 @@ angular.module('interfaceApp')
     // Testing cache features using CacheFactory
 
   	// Check to make sure the cache doesn't already exist
-    console.log(profileCache.info());
   	if (!CacheFactory.get('profileCache')) {
     	profileCache = CacheFactory('profileCache', {
         maxAge: 60 * 60 * 1000, 
@@ -92,6 +91,9 @@ angular.module('interfaceApp')
               name: file.name,
               url:  d_url
             });
+
+            console.log(profileCache.info());
+            console.log(profileCache.keys())
             console.log("Added to cache");
             $mdToast.show(
       				$mdToast.simple()
