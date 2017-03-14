@@ -56,7 +56,7 @@ angular.module('interfaceApp')
         console.log($scope.signedRequest);
       });
 
-      $http.post($scope.signedRequest, file).then(function(){
+      $http.post($scope.signedRequest, file).success(function(msg){
         console.log("Should have worked")
       });
     }
