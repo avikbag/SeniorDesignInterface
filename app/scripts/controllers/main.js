@@ -66,6 +66,7 @@ angular.module('interfaceApp')
           const response = JSON.parse(xhr.responseText);
           console.log("checking get signed req");
           console.log(response);
+          uploadFiles(file, response.signedRequest);
           //uploadFile(file, response.signedRequest, response.url);
           }
         else{
@@ -84,8 +85,6 @@ angular.module('interfaceApp')
 				//}, function errorCallback(response) {
           //console.log("fail")
 			//});
-
-      uploadFiles(file, $scope.signedRequest);
     }
     var uploadFiles = function(file, sr){
       const xhr = new XMLHttpRequest();
