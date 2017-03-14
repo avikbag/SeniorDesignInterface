@@ -51,9 +51,10 @@ angular.module('interfaceApp')
 
     var getSignedRequest = function(file){
       var req = '/sign-s3?file-name='+file.name+'&file-type='+file.type
+      console.log(typeof(req));
       stats.fetch(req).then(function(msg){
         $scope.signedRequest = msg.data.signedRequest
-        console.log(msg);
+        console.log(typeof($scope.signedRequest));
       });
 
 			//$http({
