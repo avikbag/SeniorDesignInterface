@@ -60,7 +60,7 @@ angular.module('interfaceApp')
         console.log("Should have worked")
       });
 			$http({
-  			method: 'POST',
+  			method: 'PUT',
   			url: $scope.signedRequest,
         data: file
 				}).then(function successCallback(response) {
