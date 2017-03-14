@@ -74,6 +74,7 @@ angular.module('interfaceApp')
           }
         } 
       };
+      xhr.send();
     }
     // Uploads actual file once authentication is recieved. 
     var uploadFiles = function(file, sr, d_url){
