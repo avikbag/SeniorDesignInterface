@@ -128,7 +128,12 @@
               menu
             </md-icon>
 					</md-button>
-					<md-button class="md-fab md-hue-2 md-mini">
+					<md-button class="md-fab md-hue-2 md-mini" 
+            ngf-select="reader()"
+            ng-model="file" 
+            name="file" 
+            ngf-pattern="'.pdf'" 
+            ngf-accept="'pdf/*'" >
             <md-tooltip md-direction="top">
               Job output file upload
             </md-tooltip> 
