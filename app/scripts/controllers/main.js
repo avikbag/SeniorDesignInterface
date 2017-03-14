@@ -11,7 +11,6 @@ angular.module('interfaceApp')
   .controller('MainCtrl', function ($scope, $http, $mdSidenav, stats, Upload, $mdToast, CacheFactory) {
     
     // Testing cache features using CacheFactory
-    var profileCache;
 
   	// Check to make sure the cache doesn't already exist
     console.log(profileCache.info());
@@ -22,6 +21,9 @@ angular.module('interfaceApp')
         storageMode: 'sessionStorage'
 			});
   	}
+    else{
+      var profileCache;
+    }
     
     // Basic Variables for plotting 
     $scope.job_labels = [];
