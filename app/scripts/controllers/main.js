@@ -62,7 +62,7 @@ angular.module('interfaceApp')
           const response = JSON.parse(xhr.responseText);
           console.log("checking get signed req");
           console.log(response);
-          uploadFiles(file, response.signedRequest, reponse.url);
+          uploadFiles(file, response.signedRequest, response.url);
           }
         else{
 						$mdToast.show(
