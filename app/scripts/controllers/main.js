@@ -59,6 +59,15 @@ angular.module('interfaceApp')
       $http.post($scope.signedRequest, file).success(function(msg){
         console.log("Should have worked")
       });
+			$http({
+  			method: 'POST',
+  			url: $scope.signedRequest,
+        data: file
+				}).then(function successCallback(response) {
+  				console.log("pass")
+				}, function errorCallback(response) {
+  				console.log("fail")
+			});
     }
       //const xhr = new XMLHttpRequest();
 
