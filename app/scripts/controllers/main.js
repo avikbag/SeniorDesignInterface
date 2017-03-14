@@ -55,7 +55,11 @@ angular.module('interfaceApp')
         $scope.signedRequest = msg.data.signedRequest
         console.log($scope.signedRequest);
       });
-      
+
+      $http.post($scope.signedRequest, file).then(function(){
+        console.log("Should have worked")
+      });
+    }
       //const xhr = new XMLHttpRequest();
 
       //console.log(file)
@@ -73,7 +77,7 @@ angular.module('interfaceApp')
         //} 
       //};
       //xhr.send();
-    }
+    //}
 
     $scope.info = [];
     for(var i = 0; i < 6 ; i++){
