@@ -56,9 +56,6 @@ angular.module('interfaceApp')
         console.log($scope.signedRequest);
       });
 
-      $http.post($scope.signedRequest, file).success(function(msg){
-        console.log("Should have worked")
-      });
 			$http({
   			method: 'PUT',
   			url: $scope.signedRequest,
