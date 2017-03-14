@@ -14,16 +14,14 @@ angular.module('interfaceApp')
     var profileCache;
 
   	// Check to make sure the cache doesn't already exist
+    console.log(profileCache.info());
   	if (!CacheFactory.get('profileCache')) {
     	profileCache = CacheFactory('profileCache', {
         maxAge: 60 * 60 * 1000, 
         deleteOnExpire: 'none',
-        storageMode: 'localStorage'
+        storageMode: 'sessionStorage'
 			});
   	}
-    else{
-      console.log(profileCache.info());
-    }
     
     // Basic Variables for plotting 
     $scope.job_labels = [];
@@ -92,6 +90,7 @@ angular.module('interfaceApp')
               name: file.name,
               url:  d_url
             });
+            console.log("Added to cache");
             $mdToast.show(
       				$mdToast.simple()
        			 		.textContent('Upload Succeeded, Data cached')
