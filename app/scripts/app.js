@@ -18,7 +18,8 @@ angular
     'ngTouch',
     'chart.js',
     'ngMaterial',
-    'ngFileUpload'
+    'ngFileUpload', 
+    'angular-cache'
   ])
   .config(function ($routeProvider) {
     $routeProvider

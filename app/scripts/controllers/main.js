@@ -8,25 +8,21 @@
  * Controller of the interfaceApp
  */
 angular.module('interfaceApp')
-  .controller('MainCtrl', function ($scope, $http, $mdSidenav, stats, Upload, $mdToast) {
-    // adding test upload using ng upload
+  .controller('MainCtrl', function ($scope, $http, $mdSidenav, stats, Upload, $mdToast, CacheFactory) {
     
+    // Testing cache features using CacheFactory
+    var profileCache;
+
+  	// Check to make sure the cache doesn't already exist
+  	if (!CacheFactory.get('profileCache')) {
+    	profileCache = CacheFactory('profileCache', {
+        maxAge: 60 * 60 * 1000, 
+        deleteOnExpire: 'none',
+        storageMode: 'localStorage'
+			});
+  	}
     
-
-    /*
-    var dir = "/src.json"
-    stats.fetch(dir).then(function(msg){
-      temp_keys = Object.keys(msg.data.op_class);
-      $scope.labels = temp_keys;
-      for(var i = 0; i < temp_keys.length -1 ; i++)
-      {
-        temp_vals.push(msg.data.op_class[temp_keys[i]]);
-      }
-      $scope.data = temp_vals;
-
-    });
-    */
-    // Bar graph view for op code/execution time.
+    // Basic Variables for plotting 
     $scope.job_labels = [];
     $scope.class_type = [];
     $scope.values = [];
@@ -37,26 +33,26 @@ angular.module('interfaceApp')
     var checker = 0;
     var dir_template = "mockdata/job_output";
     
-
-    var testUrl = 'https://s3-us-west-2.amazonaws.com/archeval/job_output2.json'
-    console.log("in controller " + test);
-    stats.fetch(testUrl).then(function(msg){
-      console.log(msg);
-    });
-
+    // Get request for data for test from amw s3
+    // TODO: Remove this section. 
+    //var testUrl = 'https://s3-us-west-2.amazonaws.com/archeval/job_output2.json'
+    //console.log("in controller " + test);
+    //stats.fetch(testUrl).then(function(msg){
+      //console.log(msg);
+    //});
+    
+    // Main function that is called when the upload 
+    // button is triggered. On selecting the file, 
+    // it automatically uploads the file. 
     $scope.reader = function(){
       console.log($scope.file);
 			getSignedRequest($scope.file)
     }
-
+    
+    // Gets the signed request for proper authenticated
+    // put request
     var getSignedRequest = function(file){
       var req = '/sign-s3?file-name='+file.name+'&file-type='+file.type
-      //console.log(typeof(req));
-      //stats.fetch(req).then(function(msg){
-        //$scope.signedRequest = msg.data.signedRequest
-        //console.log(typeof($scope.signedRequest));
-        //console.log(msg)
-      //});
       const xhr = new XMLHttpRequest();
 
       xhr.open('GET', req);
@@ -66,8 +62,7 @@ angular.module('interfaceApp')
           const response = JSON.parse(xhr.responseText);
           console.log("checking get signed req");
           console.log(response);
-          uploadFiles(file, response.signedRequest);
-          //uploadFile(file, response.signedRequest, response.url);
+          uploadFiles(file, response.signedRequest, reponse.url);
           }
         else{
 						$mdToast.show(
@@ -79,19 +74,9 @@ angular.module('interfaceApp')
           }
         } 
       };
-      xhr.send();
-
-			//$http({
-        //method: 'PUT',
-        //url: $scope.signedRequest,
-        //data: file
-				//}).then(function successCallback(response) {
-          //console.log("pass")
-				//}, function errorCallback(response) {
-          //console.log("fail")
-			//});
     }
-    var uploadFiles = function(file, sr){
+    // Uploads actual file once authentication is recieved. 
+    var uploadFiles = function(file, sr, d_url){
       const xhr = new XMLHttpRequest();
 
       console.log(sr)
@@ -99,10 +84,11 @@ angular.module('interfaceApp')
       xhr.onreadystatechange = function() {
       if(xhr.readyState === 4){
         if(xhr.status === 200){
-          //const response = JSON.parse(xhr.responseText);
-          //console.log("This part works angularized")
-          //uploadFile(file, response.signedRequest, response.url);
-						$mdToast.show(
+						profileCache.put(file.name, {
+              name: file.name,
+              url:  d_url
+            });
+            $mdToast.show(
       				$mdToast.simple()
        			 		.textContent('Upload Succeeded, Data cached')
         				.position('top right')
@@ -110,7 +96,12 @@ angular.module('interfaceApp')
     					);
           }
         else{
-          
+						$mdToast.show(
+      				$mdToast.simple()
+       			 		.textContent('Upload Failed')
+        				.position('top right')
+        				.hideDelay(3000)
+    					);
           }
         } 
       };
@@ -169,7 +160,6 @@ angular.module('interfaceApp')
           for(var j = 0; j < 6; j++){
             // Push an empty array, meaning a row, each corresponsing 
             // to the series, in other words, the classes
-            //console.log("cjdsflka")
             $scope.valuesRV.push(Array(6).fill(-1));
           }
         } // End of initialization
