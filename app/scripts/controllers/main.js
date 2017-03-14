@@ -56,34 +56,37 @@ angular.module('interfaceApp')
         console.log($scope.signedRequest);
       });
 
-			$http({
-  			method: 'PUT',
-  			url: $scope.signedRequest,
-        data: file
-				}).then(function successCallback(response) {
-  				console.log("pass")
-				}, function errorCallback(response) {
-  				console.log("fail")
-			});
+			//$http({
+        //method: 'PUT',
+        //url: $scope.signedRequest,
+        //data: file
+				//}).then(function successCallback(response) {
+          //console.log("pass")
+				//}, function errorCallback(response) {
+          //console.log("fail")
+			//});
+
+      uploadFiles(file, $scope.signedRequest);
     }
-      //const xhr = new XMLHttpRequest();
+    var uploadFiles = function(file, sr){
+      const xhr = new XMLHttpRequest();
 
       //console.log(file)
-      //xhr.open('GET','/sign-s3?file-name='+file.name+'&file-type='+file.type);
-      //xhr.onreadystatechange = function() {
-      //if(xhr.readyState === 4){
-        //if(xhr.status === 200){
+      xhr.open('PUT', sr);
+      xhr.onreadystatechange = function() {
+      if(xhr.readyState === 4){
+        if(xhr.status === 200){
           //const response = JSON.parse(xhr.responseText);
           //console.log("This part works angularized")
-          ////uploadFile(file, response.signedRequest, response.url);
-          //}
-        //else{
-          //alert('Could not get signed URL.');
-          //}
-        //} 
-      //};
-      //xhr.send();
-    //}
+          //uploadFile(file, response.signedRequest, response.url);
+          }
+        else{
+          alert('Could not get signed URL.');
+          }
+        } 
+      };
+      xhr.send(file);
+    }
 
     $scope.info = [];
     for(var i = 0; i < 6 ; i++){
