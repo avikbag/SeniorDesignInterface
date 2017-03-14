@@ -14,6 +14,9 @@ angular.module('interfaceApp')
     return {
       fetch: function (dir) {
         return $http.get(dir);
+      },
+      keep: function (dir) {
+        return $http.post(dir);
       }
     };
   });
