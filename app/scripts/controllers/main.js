@@ -70,7 +70,12 @@ angular.module('interfaceApp')
           //uploadFile(file, response.signedRequest, response.url);
           }
         else{
-          $mdToast.showSimple('Upload Failed');
+						$mdToast.show(
+      				$mdToast.simple()
+       			 		.textContent('Upload Failed')
+        				.position('top right')
+        				.hideDelay(3000)
+    					);
           }
         } 
       };
@@ -100,7 +105,7 @@ angular.module('interfaceApp')
 						$mdToast.show(
       				$mdToast.simple()
        			 		.textContent('Upload Succeeded, Data cached')
-        				.position('Top Right' )
+        				.position('top right')
         				.hideDelay(3000)
     					);
           }
