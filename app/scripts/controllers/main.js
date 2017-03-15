@@ -26,6 +26,7 @@ angular.module('interfaceApp')
     console.log(url_count);
     $scope.clearCache = function(){
       profileCache.removeAll();
+      init();
       console.log(profileCache.info());
     };
     // Basic Variables for plotting 
