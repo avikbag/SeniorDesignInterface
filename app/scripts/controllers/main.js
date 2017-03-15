@@ -29,16 +29,28 @@ angular.module('interfaceApp')
       console.log(profileCache.info());
     };
     // Basic Variables for plotting 
-    $scope.job_labels = [];
-    $scope.class_type = [];
-    $scope.values = [];
-    $scope.execTimes = [];
-    $scope.area = [];
-    $scope.power = [[], []];
-    $scope.powerSeries = ["Dynamic read energy (nJ)", "Dynamic write energy (nJ)"]
-    var checker = 0;
-    var dir_template = "mockdata/job_output";
+    var init = function(){
+      $scope.job_labels = [];
+      $scope.class_type = [];
+      $scope.values = [];
+      $scope.execTimes = [];
+      $scope.area = [];
+      $scope.power = [[], []];
+      $scope.powerSeries = ["Dynamic read energy (nJ)", "Dynamic write energy (nJ)"]
+      var checker = 0;
+      $scope.info = [];
+      //var dir_template = "mockdata/job_output";
+      
+      $scope.job_labelsRV = [];
+      $scope.class_typeRV = [];
+      $scope.valuesRV = [];
+      var checkerRV = 0;
+      //var dir_template = "mockdata/job_output";
+    }
     
+    // Clear to start
+    init();
+
     // Get request for data for test from amw s3
     // TODO: Remove this section. 
     //var testUrl = 'https://s3-us-west-2.amazonaws.com/archeval/job_output2.json'
@@ -82,6 +94,71 @@ angular.module('interfaceApp')
       };
       xhr.send();
     }
+    var data_extraction = function(){
+      for(var i = 0; i < url_count ; i++){
+        $scope.job_labels.push("job"+i);
+        stats.fetch(url_list[i].url).then(function(msg){
+          var data = msg.data.job_details.simulation_results.gem5.op_class;
+          $scope.execTimes.push(msg.data.job_details.simulation_results.gem5["execution time (s)"]);
+          $scope.area.push(msg.data.job_details.simulation_results.mcpat["Area (mm2)"]);
+          $scope.power[0].push(msg.data.job_details.simulation_results.mcpat["Dynamic read energy (nJ)"]);
+          $scope.power[1].push(msg.data.job_details.simulation_results.mcpat["Dynamic write energy (nJ)"]);
+          var keys = Object.keys(data);
+          // Adding job info to list
+          delete msg.data.job_details["simulation_results"];
+          $scope.info.push(msg);
+          if ($scope.class_type.length == 0){
+            // Initializing the series
+            $scope.class_type.push.apply($scope.class_type, keys);
+            for(var j = 0; j < $scope.class_type.length; j++){
+              // Push an empty array, meaning a row, each corresponsing 
+              // to the series, in other words, the classes
+              $scope.values.push(Array(6).fill(-1));
+            }
+          } // End of initialization
+          
+          for(var j = 0; j < keys.length; j++){
+            //console.log(keys[j], data[keys[j]], j);
+            $scope.values[j][checker] = data[keys[j]];
+          }
+        //console.log($scope.values, $scope.class_type, $scope.execTimes);
+        //console.log("Job"+checker+"done\n\n");
+        checker += 1;
+        });
+      }
+    }
+    
+    // Radar view for op code 
+    var data_extractionRV = function(){
+      for(var i = 0; i < url_count ; i++){
+        $scope.class_typeRV.push("job"+i);
+        stats.fetch(url_list[i].url).then(function(msg){
+          var data = msg.data.job_details.simulation_results.gem5.op_class;
+          var keys = Object.keys(data);
+          //console.log(keys)
+          if ($scope.job_labelsRV.length == 0){
+            // Initializing the series
+            $scope.job_labelsRV.push.apply($scope.job_labelsRV, keys);
+            $scope.job_labelsRV.pop();
+            for(var j = 0; j < 6; j++){
+              // Push an empty array, meaning a row, each corresponsing 
+              // to the series, in other words, the classes
+              $scope.valuesRV.push(Array(6).fill(-1));
+            }
+          } // End of initialization
+          
+          for(var j = 0; j < keys.length - 1; j++){
+            //console.log(keys[j], data[keys[j]], j);
+            //console.log($scope.valuesRV)
+            $scope.valuesRV[checkerRV][j] = data[keys[j]];
+          }
+        //console.log($scope.valuesRV, $scope.class_typeRV, $scope.job_labelsRV)
+        //console.log("Job"+checkerRV+"done\n\n");
+        checkerRV += 1;
+        });
+      }
+    }
+
     // Uploads actual file once authentication is recieved. 
     var uploadFiles = function(file, sr, d_url){
       const xhr = new XMLHttpRequest();
@@ -105,6 +182,11 @@ angular.module('interfaceApp')
         				.position('top right')
         				.hideDelay(3000)
     					);
+            
+            // Caling initial plotter
+            init();
+            data_extraction();
+            data_extractionRV();
           }
         else{
 						$mdToast.show(
@@ -118,73 +200,10 @@ angular.module('interfaceApp')
       };
       xhr.send(file);
     }
+    // Caling initial plotter
+    data_extraction();
+    data_extractionRV();
 
-    $scope.info = [];
-    for(var i = 0; i < url_count ; i++){
-      $scope.job_labels.push("job"+i);
-      stats.fetch(url_list[i].url).then(function(msg){
-        var data = msg.data.job_details.simulation_results.gem5.op_class;
-        $scope.execTimes.push(msg.data.job_details.simulation_results.gem5["execution time (s)"]);
-        $scope.area.push(msg.data.job_details.simulation_results.mcpat["Area (mm2)"]);
-        $scope.power[0].push(msg.data.job_details.simulation_results.mcpat["Dynamic read energy (nJ)"]);
-        $scope.power[1].push(msg.data.job_details.simulation_results.mcpat["Dynamic write energy (nJ)"]);
-        var keys = Object.keys(data);
-        // Adding job info to list
-        delete msg.data.job_details["simulation_results"];
-        $scope.info.push(msg);
-        if ($scope.class_type.length == 0){
-          // Initializing the series
-          $scope.class_type.push.apply($scope.class_type, keys);
-          for(var j = 0; j < $scope.class_type.length; j++){
-            // Push an empty array, meaning a row, each corresponsing 
-            // to the series, in other words, the classes
-            $scope.values.push(Array(6).fill(-1));
-          }
-        } // End of initialization
-        
-        for(var j = 0; j < keys.length; j++){
-          //console.log(keys[j], data[keys[j]], j);
-          $scope.values[j][checker] = data[keys[j]];
-        }
-      //console.log($scope.values, $scope.class_type, $scope.execTimes);
-      //console.log("Job"+checker+"done\n\n");
-      checker += 1;
-      });
-    }
-    
-    // Radar view for op code 
-    $scope.job_labelsRV = [];
-    $scope.class_typeRV = [];
-    $scope.valuesRV = [];
-    var checkerRV = 0;
-    var dir_template = "mockdata/job_output";
-    for(var i = 0; i < url_count ; i++){
-      $scope.class_typeRV.push("job"+i);
-      stats.fetch(url_list[i].url).then(function(msg){
-        var data = msg.data.job_details.simulation_results.gem5.op_class;
-        var keys = Object.keys(data);
-        //console.log(keys)
-        if ($scope.job_labelsRV.length == 0){
-          // Initializing the series
-          $scope.job_labelsRV.push.apply($scope.job_labelsRV, keys);
-          $scope.job_labelsRV.pop();
-          for(var j = 0; j < 6; j++){
-            // Push an empty array, meaning a row, each corresponsing 
-            // to the series, in other words, the classes
-            $scope.valuesRV.push(Array(6).fill(-1));
-          }
-        } // End of initialization
-        
-        for(var j = 0; j < keys.length - 1; j++){
-          //console.log(keys[j], data[keys[j]], j);
-          //console.log($scope.valuesRV)
-          $scope.valuesRV[checkerRV][j] = data[keys[j]];
-        }
-      //console.log($scope.valuesRV, $scope.class_typeRV, $scope.job_labelsRV)
-      //console.log("Job"+checkerRV+"done\n\n");
-      checkerRV += 1;
-      });
-    }
     $scope.options = {
             title: {
               display: true,
