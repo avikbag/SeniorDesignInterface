@@ -120,9 +120,9 @@ angular.module('interfaceApp')
     }
 
     $scope.info = [];
-    for(var i = 0; i < 6 ; i++){
+    for(var i = 0; i < url_count ; i++){
       $scope.job_labels.push("job"+i);
-      stats.fetch(dir_template + i + ".json").then(function(msg){
+      stats.fetch(url_list[i].url).then(function(msg){
         var data = msg.data.job_details.simulation_results.gem5.op_class;
         $scope.execTimes.push(msg.data.job_details.simulation_results.gem5["execution time (s)"]);
         $scope.area.push(msg.data.job_details.simulation_results.mcpat["Area (mm2)"]);
@@ -158,9 +158,9 @@ angular.module('interfaceApp')
     $scope.valuesRV = [];
     var checkerRV = 0;
     var dir_template = "mockdata/job_output";
-    for(var i = 0; i < 6 ; i++){
+    for(var i = 0; i < url_count ; i++){
       $scope.class_typeRV.push("job"+i);
-      stats.fetch(dir_template + i + ".json").then(function(msg){
+      stats.fetch(url_list[i].url).then(function(msg){
         var data = msg.data.job_details.simulation_results.gem5.op_class;
         var keys = Object.keys(data);
         //console.log(keys)
