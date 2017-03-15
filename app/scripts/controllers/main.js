@@ -29,6 +29,8 @@ angular.module('interfaceApp')
       console.log(profileCache.info());
     };
     // Basic Variables for plotting 
+    var checker = 0;
+    var checkerRV = 0;
     var init = function(){
       $scope.job_labels = [];
       $scope.class_type = [];
@@ -37,15 +39,15 @@ angular.module('interfaceApp')
       $scope.area = [];
       $scope.power = [[], []];
       $scope.powerSeries = ["Dynamic read energy (nJ)", "Dynamic write energy (nJ)"]
-      var checker = 0;
       $scope.info = [];
       //var dir_template = "mockdata/job_output";
       
       $scope.job_labelsRV = [];
       $scope.class_typeRV = [];
       $scope.valuesRV = [];
-      var checkerRV = 0;
       //var dir_template = "mockdata/job_output";
+      checker = 0;
+      checkerRV = 0;
     }
     
     // Clear to start
