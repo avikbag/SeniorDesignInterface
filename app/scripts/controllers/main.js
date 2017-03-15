@@ -21,7 +21,7 @@ angular.module('interfaceApp')
         storageMode: 'localStorage'
 			});
   	}
-    console.log(profileCache.info());
+    console.log(profileCache.values());
     $scope.clearCache = function(){
       profileCache.removeAll();
       console.log(profileCache.info());
