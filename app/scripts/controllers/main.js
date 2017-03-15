@@ -12,7 +12,6 @@ angular.module('interfaceApp')
     
     // Testing cache features using CacheFactory
     var profileCache;
-    console.log(profileCache.info());
   	
     // Check to make sure the cache doesn't already exist
   	if (!CacheFactory.get('profileCache')) {
@@ -22,6 +21,7 @@ angular.module('interfaceApp')
         storageMode: 'localStorage'
 			});
   	}
+    console.log(profileCache.info());
     
     // Basic Variables for plotting 
     $scope.job_labels = [];
