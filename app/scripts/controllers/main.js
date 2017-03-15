@@ -32,6 +32,10 @@ angular.module('interfaceApp')
     var checker = 0;
     var checkerRV = 0;
     var init = function(){
+      // Update list 
+      url_list = profileCache.values();
+      url_count = url_list.length;
+      
       $scope.job_labels = [];
       $scope.class_type = [];
       $scope.values = [];
