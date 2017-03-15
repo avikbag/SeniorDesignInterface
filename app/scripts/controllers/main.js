@@ -21,6 +21,9 @@ angular.module('interfaceApp')
         storageMode: 'localStorage'
 			});
   	}
+    else{
+      console.log(profileCache.info());
+    }
     
     // Basic Variables for plotting 
     $scope.job_labels = [];
