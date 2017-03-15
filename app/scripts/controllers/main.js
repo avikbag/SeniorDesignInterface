@@ -22,7 +22,10 @@ angular.module('interfaceApp')
 			});
   	}
     console.log(profileCache.info());
-    
+    $scope.clearCache = function(){
+      profileCache.removeAll();
+      console.log(profileCache.info());
+    };
     // Basic Variables for plotting 
     $scope.job_labels = [];
     $scope.class_type = [];

@@ -20,7 +20,21 @@
         <md-content layout-margin >
         </md-content>
       </md-content>
-      <md-subheader class="md-no-sticky"><h4 style="color: #388E3C;">Current Active</h4></md-subheader>
+      <md-subheader class="md-no-sticky">
+        <div layout="row">
+        <md-button class="md-secondary md-icon-button" ng-click="cleanCache()">
+          <md-tooltip md-direction="top">
+            Clear all
+          </md-tooltip> 
+          <md-icon md-font-library="material-icons" style="color: red">
+            clear_all
+          </md-icon>
+        </md-button>
+        <h4 style="color: #388E3C;">
+          Current Active
+        </h4>
+        </div>
+      </md-subheader>
 	<md-list-item class="secondary-button-padding md-list-item-text" ng-click="null" layout="row" ng-repeat="detail in info">
     <div layout="column">
         <h5>{{detail.data.job_details.job_name}} </h5>
